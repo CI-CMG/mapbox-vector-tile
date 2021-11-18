@@ -5,4 +5,8 @@ target/
 *.aux.xml
 .DS_Store
 out/
+pom.xml.next
+pom.xml.releaseBackup
+pom.xml.tag
+release.properties
 
