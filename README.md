@@ -1,7 +1,6 @@
 
 # MapBox Vector Tile - Java
 
-[![Build Status](https://travis-ci.org/wdtinc/mapbox-vector-tile-java.svg?branch=master)](https://travis-ci.org/wdtinc/mapbox-vector-tile-java)
 
 Contents
 
@@ -35,23 +34,11 @@ See:
 
 #### Maven
 
-Latest version using JTS 15 with android API level 15 support:
-
 ```xml
 <dependency>
-    <groupId>com.wdtinc</groupId>
+    <groupId>io.github.ci-cmg</groupId>
     <artifactId>mapbox-vector-tile</artifactId>
-    <version>3.1.1</version>
-</dependency>
-```
-
-JTS 14 with no android support:
-
-```xml
-<dependency>
-    <groupId>com.wdtinc</groupId>
-    <artifactId>mapbox-vector-tile</artifactId>
-    <version>2.0.0</version>
+    <version>4.0.0</version>
 </dependency>
 ```
 
@@ -60,13 +47,7 @@ JTS 14 with no android support:
 Latest version using JTS 15 with android API level 15 support:
 
 ```
-compile 'com.wdtinc:mapbox-vector-tile:3.1.1'
-```
-
-JTS 14 with no android support:
-
-```
-compile 'com.wdtinc:mapbox-vector-tile:2.0.0'
+compile 'io.github.ci-cmg:mapbox-vector-tile:4.0.0'
 ```
 
 ### Reading MVTs
@@ -244,10 +225,6 @@ final TileGeomResult bufferedTileGeom = JtsAdapter.createTileGeom(
 final VectorTile.Tile mvt = encodeMvt(DEFAULT_MVT_PARAMS, bufferedTileGeom);
 ```
 
-## Examples
-
-See [tests](https://github.com/wdtinc/mapbox-vector-tile-java/tree/readme_upgrade/src/test/java/com/wdtinc/mapbox_vector_tile).
-
 ## How to generate VectorTile class using vector_tile.proto
 
 If vector_tile.proto is changed in the specification, VectorTile may need to be regenerated.
@@ -261,7 +238,7 @@ protoc --java_out=src/main/java src/main/resources/vector_tile.proto
 These options were added to the .proto file:
 
  * syntax = "proto2";
- * option java_package = "com.wdtinc.mapbox_vector_tile";
+ * option java_package = "io.github.ci-cmg.mapbox_vector_tile";
  * option java_outer_classname = "VectorTile";
 
 ## Issues
