@@ -888,19 +888,22 @@ public final class VectorTile {
 
         // Construct using com.wdtinc.mapbox_vector_tile.VectorTile.Tile.Value.newBuilder()
         private Builder() {
-          maybeForceBuilderInitialization();
+          //TODO legacy code -> GNDN
+//          maybeForceBuilderInitialization();
         }
 
         private Builder(
             com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
           super(parent);
-          maybeForceBuilderInitialization();
+          //TODO legacy code -> GNDN
+//          maybeForceBuilderInitialization();
         }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-          }
-        }
+        //TODO legacy code -> GNDN
+//        private void maybeForceBuilderInitialization() {
+//          if (com.google.protobuf.GeneratedMessageV3
+//              .alwaysUseFieldBuilders) {
+//          }
+//        }
         public Builder clear() {
           super.clear();
           stringValue_ = "";
@@ -2043,19 +2046,21 @@ public final class VectorTile {
 
         // Construct using com.wdtinc.mapbox_vector_tile.VectorTile.Tile.Feature.newBuilder()
         private Builder() {
-          maybeForceBuilderInitialization();
+          //TODO legacy code -> GNDN
+//          maybeForceBuilderInitialization();
         }
 
         private Builder(
             com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
           super(parent);
-          maybeForceBuilderInitialization();
+          //TODO legacy code -> GNDN
+//          maybeForceBuilderInitialization();
         }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-          }
-        }
+        //TODO legacy code -> GNDN
+//        private void maybeForceBuilderInitialization() {
+//          if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+//          }
+//        }
         public Builder clear() {
           super.clear();
           id_ = 0L;
