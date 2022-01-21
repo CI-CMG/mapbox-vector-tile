@@ -30,7 +30,7 @@
     <connection>scm:git:git@github.com:CI-CMG/mapbox-vector-tile.git</connection>
     <developerConnection>scm:git:git@github.com:CI-CMG/mapbox-vector-tile.git</developerConnection>
     <url>https://github.com/CI-CMG/mapbox-vector-tile</url>
-    <tag>HEAD</tag>
+    <tag>4.1</tag>
   </scm>
 
   <distributionManagement>
