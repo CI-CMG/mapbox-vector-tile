@@ -189,7 +189,6 @@
           <goals>deploy site</goals>
           <tagNameFormat>v@{project.version}</tagNameFormat>
           <arguments>-Pdep-check</arguments>
-          <branchName>${parsedVersion.majorVersion}.${parsedVersion.minorVersion}</branchName>
         </configuration>
       </plugin>
 
