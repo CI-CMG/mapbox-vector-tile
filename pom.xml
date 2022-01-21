@@ -153,6 +153,19 @@
     </pluginManagement>
 
     <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>build-helper-maven-plugin</artifactId>
+        <version>3.3.0</version>
+        <executions>
+          <execution>
+            <id>parse-version</id>
+            <goals>
+              <goal>parse-version</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
 
       <plugin>
         <groupId>org.sonatype.plugins</groupId>
@@ -176,6 +189,7 @@
           <goals>deploy site</goals>
           <tagNameFormat>v@{project.version}</tagNameFormat>
           <arguments>-Pdep-check</arguments>
+          <branchName>@{parsedVersion.majorVersion}.@{parsedVersion.minorVersion}</branchName>
         </configuration>
       </plugin>
 
