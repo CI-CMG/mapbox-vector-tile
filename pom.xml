@@ -223,6 +223,21 @@
           </execution>
         </executions>
       </plugin>
+      <plugin>
+        <groupId>org.simplify4u.plugins</groupId>
+        <artifactId>sign-maven-plugin</artifactId>
+        <version>1.0.0</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>sign</goal>
+            </goals>
+            <configuration>
+              <skipNoKey>false</skipNoKey>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
 
@@ -247,22 +262,6 @@
 <!--              </execution>-->
 <!--            </executions>-->
 <!--          </plugin>-->
-          <plugin>
-            <groupId>org.simplify4u.plugins</groupId>
-            <artifactId>sign-maven-plugin</artifactId>
-            <version>1.0.0</version>
-            <executions>
-              <execution>
-                <phase>verify</phase>
-                <goals>
-                  <goal>sign</goal>
-                </goals>
-                <configuration>
-                  <skipNoKey>false</skipNoKey>
-                </configuration>
-              </execution>
-            </executions>
-          </plugin>
         </plugins>
       </build>
     </profile>
