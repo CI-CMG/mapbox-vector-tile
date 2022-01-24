@@ -4,7 +4,7 @@
 
   <groupId>io.github.ci-cmg</groupId>
   <artifactId>mapbox-vector-tile</artifactId>
-  <version>4.0.5-SNAPSHOT</version>
+  <version>4.0.4-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>${project.groupId}:${project.artifactId}</name>
@@ -49,6 +49,7 @@
     <slf4j.version>1.7.33</slf4j.version>
     <javadoc.version>3.3.1</javadoc.version>
     <jacoco.version>0.8.7</jacoco.version>
+    <sign.serverId/>
   </properties>
 
   <dependencies>
@@ -188,7 +189,7 @@
           <releaseProfiles>release,site-publish</releaseProfiles>
           <goals>deploy site</goals>
           <tagNameFormat>v@{project.version}</tagNameFormat>
-          <arguments>-Pdep-check</arguments>
+          <arguments>-Pdep-check -D${sign.serverId}</arguments>
         </configuration>
       </plugin>
 
