@@ -22,12 +22,12 @@ public final class VectorTile {
     /**
      * <code>repeated .vector_tile.Tile.Layer layers = 3;</code>
      */
-    java.util.List<VectorTile.Tile.Layer>
-    getLayersList();
+    java.util.List<edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer> 
+        getLayersList();
     /**
      * <code>repeated .vector_tile.Tile.Layer layers = 3;</code>
      */
-    VectorTile.Tile.Layer getLayers(int index);
+    edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer getLayers(int index);
     /**
      * <code>repeated .vector_tile.Tile.Layer layers = 3;</code>
      */
@@ -35,25 +35,25 @@ public final class VectorTile {
     /**
      * <code>repeated .vector_tile.Tile.Layer layers = 3;</code>
      */
-    java.util.List<? extends VectorTile.Tile.LayerOrBuilder>
-    getLayersOrBuilderList();
+    java.util.List<? extends edu.colorado.cires.cmg.mvt.VectorTile.Tile.LayerOrBuilder> 
+        getLayersOrBuilderList();
     /**
      * <code>repeated .vector_tile.Tile.Layer layers = 3;</code>
      */
-    VectorTile.Tile.LayerOrBuilder getLayersOrBuilder(
+    edu.colorado.cires.cmg.mvt.VectorTile.Tile.LayerOrBuilder getLayersOrBuilder(
         int index);
   }
   /**
    * Protobuf type {@code vector_tile.Tile}
    */
-  public  static final class Tile extends
+  public static final class Tile extends
       com.google.protobuf.GeneratedMessageV3.ExtendableMessage<
-          Tile> implements
+        Tile> implements
       // @@protoc_insertion_point(message_implements:vector_tile.Tile)
       TileOrBuilder {
-    private static final long serialVersionUID = 0L;
+  private static final long serialVersionUID = 0L;
     // Use Tile.newBuilder() to construct.
-    private Tile(com.google.protobuf.GeneratedMessageV3.ExtendableBuilder<VectorTile.Tile, ?> builder) {
+    private Tile(com.google.protobuf.GeneratedMessageV3.ExtendableBuilder<edu.colorado.cires.cmg.mvt.VectorTile.Tile, ?> builder) {
       super(builder);
     }
     private Tile() {
@@ -61,70 +61,23 @@ public final class VectorTile {
     }
 
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Tile(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 26: {
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                layers_ = new java.util.ArrayList<VectorTile.Tile.Layer>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              layers_.add(
-                  input.readMessage(VectorTile.Tile.Layer.PARSER, extensionRegistry));
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-          layers_ = java.util.Collections.unmodifiableList(layers_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-    getDescriptor() {
-      return VectorTile.internal_static_vector_tile_Tile_descriptor;
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Tile();
     }
 
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return edu.colorado.cires.cmg.mvt.VectorTile.internal_static_vector_tile_Tile_descriptor;
+    }
+
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-    internalGetFieldAccessorTable() {
-      return VectorTile.internal_static_vector_tile_Tile_fieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return edu.colorado.cires.cmg.mvt.VectorTile.internal_static_vector_tile_Tile_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              VectorTile.Tile.class, VectorTile.Tile.Builder.class);
+              edu.colorado.cires.cmg.mvt.VectorTile.Tile.class, edu.colorado.cires.cmg.mvt.VectorTile.Tile.Builder.class);
     }
 
     /**
@@ -177,6 +130,8 @@ public final class VectorTile {
       }
 
       /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
        * @deprecated Use {@link #forNumber(int)} instead.
        */
       @java.lang.Deprecated
@@ -184,6 +139,10 @@ public final class VectorTile {
         return forNumber(value);
       }
 
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
       public static GeomType forNumber(int value) {
         switch (value) {
           case 0: return UNKNOWN;
@@ -195,28 +154,28 @@ public final class VectorTile {
       }
 
       public static com.google.protobuf.Internal.EnumLiteMap<GeomType>
-      internalGetValueMap() {
+          internalGetValueMap() {
         return internalValueMap;
       }
       private static final com.google.protobuf.Internal.EnumLiteMap<
           GeomType> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<GeomType>() {
-            public GeomType findValueByNumber(int number) {
-              return GeomType.forNumber(number);
-            }
-          };
+            new com.google.protobuf.Internal.EnumLiteMap<GeomType>() {
+              public GeomType findValueByNumber(int number) {
+                return GeomType.forNumber(number);
+              }
+            };
 
       public final com.google.protobuf.Descriptors.EnumValueDescriptor
-      getValueDescriptor() {
+          getValueDescriptor() {
         return getDescriptor().getValues().get(ordinal());
       }
       public final com.google.protobuf.Descriptors.EnumDescriptor
-      getDescriptorForType() {
+          getDescriptorForType() {
         return getDescriptor();
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
-      getDescriptor() {
-        return VectorTile.Tile.getDescriptor().getEnumTypes().get(0);
+          getDescriptor() {
+        return edu.colorado.cires.cmg.mvt.VectorTile.Tile.getDescriptor().getEnumTypes().get(0);
       }
 
       private static final GeomType[] VALUES = values();
@@ -225,7 +184,7 @@ public final class VectorTile {
           com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
         if (desc.getType() != getDescriptor()) {
           throw new java.lang.IllegalArgumentException(
-              "EnumValueDescriptor is not for this type.");
+            "EnumValueDescriptor is not for this type.");
         }
         return VALUES[desc.getIndex()];
       }
@@ -250,6 +209,7 @@ public final class VectorTile {
        * </pre>
        *
        * <code>optional string string_value = 1;</code>
+       * @return Whether the stringValue field is set.
        */
       boolean hasStringValue();
       /**
@@ -258,6 +218,7 @@ public final class VectorTile {
        * </pre>
        *
        * <code>optional string string_value = 1;</code>
+       * @return The stringValue.
        */
       java.lang.String getStringValue();
       /**
@@ -266,61 +227,74 @@ public final class VectorTile {
        * </pre>
        *
        * <code>optional string string_value = 1;</code>
+       * @return The bytes for stringValue.
        */
       com.google.protobuf.ByteString
-      getStringValueBytes();
+          getStringValueBytes();
 
       /**
        * <code>optional float float_value = 2;</code>
+       * @return Whether the floatValue field is set.
        */
       boolean hasFloatValue();
       /**
        * <code>optional float float_value = 2;</code>
+       * @return The floatValue.
        */
       float getFloatValue();
 
       /**
        * <code>optional double double_value = 3;</code>
+       * @return Whether the doubleValue field is set.
        */
       boolean hasDoubleValue();
       /**
        * <code>optional double double_value = 3;</code>
+       * @return The doubleValue.
        */
       double getDoubleValue();
 
       /**
        * <code>optional int64 int_value = 4;</code>
+       * @return Whether the intValue field is set.
        */
       boolean hasIntValue();
       /**
        * <code>optional int64 int_value = 4;</code>
+       * @return The intValue.
        */
       long getIntValue();
 
       /**
        * <code>optional uint64 uint_value = 5;</code>
+       * @return Whether the uintValue field is set.
        */
       boolean hasUintValue();
       /**
        * <code>optional uint64 uint_value = 5;</code>
+       * @return The uintValue.
        */
       long getUintValue();
 
       /**
        * <code>optional sint64 sint_value = 6;</code>
+       * @return Whether the sintValue field is set.
        */
       boolean hasSintValue();
       /**
        * <code>optional sint64 sint_value = 6;</code>
+       * @return The sintValue.
        */
       long getSintValue();
 
       /**
        * <code>optional bool bool_value = 7;</code>
+       * @return Whether the boolValue field is set.
        */
       boolean hasBoolValue();
       /**
        * <code>optional bool bool_value = 7;</code>
+       * @return The boolValue.
        */
       boolean getBoolValue();
     }
@@ -332,129 +306,55 @@ public final class VectorTile {
      *
      * Protobuf type {@code vector_tile.Tile.Value}
      */
-    public  static final class Value extends
+    public static final class Value extends
         com.google.protobuf.GeneratedMessageV3.ExtendableMessage<
-            Value> implements
+          Value> implements
         // @@protoc_insertion_point(message_implements:vector_tile.Tile.Value)
         ValueOrBuilder {
-      private static final long serialVersionUID = 0L;
+    private static final long serialVersionUID = 0L;
       // Use Value.newBuilder() to construct.
-      private Value(com.google.protobuf.GeneratedMessageV3.ExtendableBuilder<VectorTile.Tile.Value, ?> builder) {
+      private Value(com.google.protobuf.GeneratedMessageV3.ExtendableBuilder<edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value, ?> builder) {
         super(builder);
       }
       private Value() {
         stringValue_ = "";
-        floatValue_ = 0F;
-        doubleValue_ = 0D;
-        intValue_ = 0L;
-        uintValue_ = 0L;
-        sintValue_ = 0L;
-        boolValue_ = false;
       }
 
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-      getUnknownFields() {
-        return this.unknownFields;
-      }
-      private Value(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        this();
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!parseUnknownField(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-              case 10: {
-                com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x00000001;
-                stringValue_ = bs;
-                break;
-              }
-              case 21: {
-                bitField0_ |= 0x00000002;
-                floatValue_ = input.readFloat();
-                break;
-              }
-              case 25: {
-                bitField0_ |= 0x00000004;
-                doubleValue_ = input.readDouble();
-                break;
-              }
-              case 32: {
-                bitField0_ |= 0x00000008;
-                intValue_ = input.readInt64();
-                break;
-              }
-              case 40: {
-                bitField0_ |= 0x00000010;
-                uintValue_ = input.readUInt64();
-                break;
-              }
-              case 48: {
-                bitField0_ |= 0x00000020;
-                sintValue_ = input.readSInt64();
-                break;
-              }
-              case 56: {
-                bitField0_ |= 0x00000040;
-                boolValue_ = input.readBool();
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
-              e).setUnfinishedMessage(this);
-        } finally {
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
-      }
-      public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
-        return VectorTile.internal_static_vector_tile_Tile_Value_descriptor;
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Value();
       }
 
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return edu.colorado.cires.cmg.mvt.VectorTile.internal_static_vector_tile_Tile_Value_descriptor;
+      }
+
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
-        return VectorTile.internal_static_vector_tile_Tile_Value_fieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return edu.colorado.cires.cmg.mvt.VectorTile.internal_static_vector_tile_Tile_Value_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                VectorTile.Tile.Value.class, VectorTile.Tile.Value.Builder.class);
+                edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value.class, edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value.Builder.class);
       }
 
       private int bitField0_;
       public static final int STRING_VALUE_FIELD_NUMBER = 1;
-      private volatile java.lang.Object stringValue_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object stringValue_ = "";
       /**
        * <pre>
        * Exactly one of these values must be present in a valid message
        * </pre>
        *
        * <code>optional string string_value = 1;</code>
+       * @return Whether the stringValue field is set.
        */
+      @java.lang.Override
       public boolean hasStringValue() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <pre>
@@ -462,13 +362,15 @@ public final class VectorTile {
        * </pre>
        *
        * <code>optional string string_value = 1;</code>
+       * @return The stringValue.
        */
+      @java.lang.Override
       public java.lang.String getStringValue() {
         java.lang.Object ref = stringValue_;
         if (ref instanceof java.lang.String) {
           return (java.lang.String) ref;
         } else {
-          com.google.protobuf.ByteString bs =
+          com.google.protobuf.ByteString bs = 
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
@@ -483,12 +385,14 @@ public final class VectorTile {
        * </pre>
        *
        * <code>optional string string_value = 1;</code>
+       * @return The bytes for stringValue.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
-      getStringValueBytes() {
+          getStringValueBytes() {
         java.lang.Object ref = stringValue_;
         if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           stringValue_ = b;
@@ -499,96 +403,121 @@ public final class VectorTile {
       }
 
       public static final int FLOAT_VALUE_FIELD_NUMBER = 2;
-      private float floatValue_;
+      private float floatValue_ = 0F;
       /**
        * <code>optional float float_value = 2;</code>
+       * @return Whether the floatValue field is set.
        */
+      @java.lang.Override
       public boolean hasFloatValue() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <code>optional float float_value = 2;</code>
+       * @return The floatValue.
        */
+      @java.lang.Override
       public float getFloatValue() {
         return floatValue_;
       }
 
       public static final int DOUBLE_VALUE_FIELD_NUMBER = 3;
-      private double doubleValue_;
+      private double doubleValue_ = 0D;
       /**
        * <code>optional double double_value = 3;</code>
+       * @return Whether the doubleValue field is set.
        */
+      @java.lang.Override
       public boolean hasDoubleValue() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <code>optional double double_value = 3;</code>
+       * @return The doubleValue.
        */
+      @java.lang.Override
       public double getDoubleValue() {
         return doubleValue_;
       }
 
       public static final int INT_VALUE_FIELD_NUMBER = 4;
-      private long intValue_;
+      private long intValue_ = 0L;
       /**
        * <code>optional int64 int_value = 4;</code>
+       * @return Whether the intValue field is set.
        */
+      @java.lang.Override
       public boolean hasIntValue() {
-        return ((bitField0_ & 0x00000008) == 0x00000008);
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <code>optional int64 int_value = 4;</code>
+       * @return The intValue.
        */
+      @java.lang.Override
       public long getIntValue() {
         return intValue_;
       }
 
       public static final int UINT_VALUE_FIELD_NUMBER = 5;
-      private long uintValue_;
+      private long uintValue_ = 0L;
       /**
        * <code>optional uint64 uint_value = 5;</code>
+       * @return Whether the uintValue field is set.
        */
+      @java.lang.Override
       public boolean hasUintValue() {
-        return ((bitField0_ & 0x00000010) == 0x00000010);
+        return ((bitField0_ & 0x00000010) != 0);
       }
       /**
        * <code>optional uint64 uint_value = 5;</code>
+       * @return The uintValue.
        */
+      @java.lang.Override
       public long getUintValue() {
         return uintValue_;
       }
 
       public static final int SINT_VALUE_FIELD_NUMBER = 6;
-      private long sintValue_;
+      private long sintValue_ = 0L;
       /**
        * <code>optional sint64 sint_value = 6;</code>
+       * @return Whether the sintValue field is set.
        */
+      @java.lang.Override
       public boolean hasSintValue() {
-        return ((bitField0_ & 0x00000020) == 0x00000020);
+        return ((bitField0_ & 0x00000020) != 0);
       }
       /**
        * <code>optional sint64 sint_value = 6;</code>
+       * @return The sintValue.
        */
+      @java.lang.Override
       public long getSintValue() {
         return sintValue_;
       }
 
       public static final int BOOL_VALUE_FIELD_NUMBER = 7;
-      private boolean boolValue_;
+      private boolean boolValue_ = false;
       /**
        * <code>optional bool bool_value = 7;</code>
+       * @return Whether the boolValue field is set.
        */
+      @java.lang.Override
       public boolean hasBoolValue() {
-        return ((bitField0_ & 0x00000040) == 0x00000040);
+        return ((bitField0_ & 0x00000040) != 0);
       }
       /**
        * <code>optional bool bool_value = 7;</code>
+       * @return The boolValue.
        */
+      @java.lang.Override
       public boolean getBoolValue() {
         return boolValue_;
       }
 
       private byte memoizedIsInitialized = -1;
+      @java.lang.Override
       public final boolean isInitialized() {
         byte isInitialized = memoizedIsInitialized;
         if (isInitialized == 1) return true;
@@ -602,70 +531,72 @@ public final class VectorTile {
         return true;
       }
 
+      @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
-          throws java.io.IOException {
+                          throws java.io.IOException {
         com.google.protobuf.GeneratedMessageV3
-            .ExtendableMessage<VectorTile.Tile.Value>.ExtensionWriter
+          .ExtendableMessage<edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value>.ExtensionWriter
             extensionWriter = newExtensionWriter();
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, stringValue_);
         }
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           output.writeFloat(2, floatValue_);
         }
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           output.writeDouble(3, doubleValue_);
         }
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((bitField0_ & 0x00000008) != 0)) {
           output.writeInt64(4, intValue_);
         }
-        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((bitField0_ & 0x00000010) != 0)) {
           output.writeUInt64(5, uintValue_);
         }
-        if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((bitField0_ & 0x00000020) != 0)) {
           output.writeSInt64(6, sintValue_);
         }
-        if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((bitField0_ & 0x00000040) != 0)) {
           output.writeBool(7, boolValue_);
         }
         extensionWriter.writeUntil(536870912, output);
-        unknownFields.writeTo(output);
+        getUnknownFields().writeTo(output);
       }
 
+      @java.lang.Override
       public int getSerializedSize() {
         int size = memoizedSize;
         if (size != -1) return size;
 
         size = 0;
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, stringValue_);
         }
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           size += com.google.protobuf.CodedOutputStream
-              .computeFloatSize(2, floatValue_);
+            .computeFloatSize(2, floatValue_);
         }
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           size += com.google.protobuf.CodedOutputStream
-              .computeDoubleSize(3, doubleValue_);
+            .computeDoubleSize(3, doubleValue_);
         }
-        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        if (((bitField0_ & 0x00000008) != 0)) {
           size += com.google.protobuf.CodedOutputStream
-              .computeInt64Size(4, intValue_);
+            .computeInt64Size(4, intValue_);
         }
-        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        if (((bitField0_ & 0x00000010) != 0)) {
           size += com.google.protobuf.CodedOutputStream
-              .computeUInt64Size(5, uintValue_);
+            .computeUInt64Size(5, uintValue_);
         }
-        if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        if (((bitField0_ & 0x00000020) != 0)) {
           size += com.google.protobuf.CodedOutputStream
-              .computeSInt64Size(6, sintValue_);
+            .computeSInt64Size(6, sintValue_);
         }
-        if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        if (((bitField0_ & 0x00000040) != 0)) {
           size += com.google.protobuf.CodedOutputStream
-              .computeBoolSize(7, boolValue_);
+            .computeBoolSize(7, boolValue_);
         }
         size += extensionsSerializedSize();
-        size += unknownFields.getSerializedSize();
+        size += getUnknownFields().getSerializedSize();
         memoizedSize = size;
         return size;
       }
@@ -673,57 +604,54 @@ public final class VectorTile {
       @java.lang.Override
       public boolean equals(final java.lang.Object obj) {
         if (obj == this) {
-          return true;
+         return true;
         }
-        if (!(obj instanceof VectorTile.Tile.Value)) {
+        if (!(obj instanceof edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value)) {
           return super.equals(obj);
         }
-        VectorTile.Tile.Value other = (VectorTile.Tile.Value) obj;
+        edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value other = (edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value) obj;
 
-        boolean result = true;
-        result = result && (hasStringValue() == other.hasStringValue());
+        if (hasStringValue() != other.hasStringValue()) return false;
         if (hasStringValue()) {
-          result = result && getStringValue()
-              .equals(other.getStringValue());
+          if (!getStringValue()
+              .equals(other.getStringValue())) return false;
         }
-        result = result && (hasFloatValue() == other.hasFloatValue());
+        if (hasFloatValue() != other.hasFloatValue()) return false;
         if (hasFloatValue()) {
-          result = result && (
-              java.lang.Float.floatToIntBits(getFloatValue())
-                  == java.lang.Float.floatToIntBits(
-                  other.getFloatValue()));
+          if (java.lang.Float.floatToIntBits(getFloatValue())
+              != java.lang.Float.floatToIntBits(
+                  other.getFloatValue())) return false;
         }
-        result = result && (hasDoubleValue() == other.hasDoubleValue());
+        if (hasDoubleValue() != other.hasDoubleValue()) return false;
         if (hasDoubleValue()) {
-          result = result && (
-              java.lang.Double.doubleToLongBits(getDoubleValue())
-                  == java.lang.Double.doubleToLongBits(
-                  other.getDoubleValue()));
+          if (java.lang.Double.doubleToLongBits(getDoubleValue())
+              != java.lang.Double.doubleToLongBits(
+                  other.getDoubleValue())) return false;
         }
-        result = result && (hasIntValue() == other.hasIntValue());
+        if (hasIntValue() != other.hasIntValue()) return false;
         if (hasIntValue()) {
-          result = result && (getIntValue()
-              == other.getIntValue());
+          if (getIntValue()
+              != other.getIntValue()) return false;
         }
-        result = result && (hasUintValue() == other.hasUintValue());
+        if (hasUintValue() != other.hasUintValue()) return false;
         if (hasUintValue()) {
-          result = result && (getUintValue()
-              == other.getUintValue());
+          if (getUintValue()
+              != other.getUintValue()) return false;
         }
-        result = result && (hasSintValue() == other.hasSintValue());
+        if (hasSintValue() != other.hasSintValue()) return false;
         if (hasSintValue()) {
-          result = result && (getSintValue()
-              == other.getSintValue());
+          if (getSintValue()
+              != other.getSintValue()) return false;
         }
-        result = result && (hasBoolValue() == other.hasBoolValue());
+        if (hasBoolValue() != other.hasBoolValue()) return false;
         if (hasBoolValue()) {
-          result = result && (getBoolValue()
-              == other.getBoolValue());
+          if (getBoolValue()
+              != other.getBoolValue()) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        result = result &&
-            getExtensionFields().equals(other.getExtensionFields());
-        return result;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        if (!getExtensionFields().equals(other.getExtensionFields()))
+          return false;
+        return true;
       }
 
       @java.lang.Override
@@ -768,74 +696,76 @@ public final class VectorTile {
               getBoolValue());
         }
         hash = hashFields(hash, getExtensionFields());
-        hash = (29 * hash) + unknownFields.hashCode();
+        hash = (29 * hash) + getUnknownFields().hashCode();
         memoizedHashCode = hash;
         return hash;
       }
 
-      public static VectorTile.Tile.Value parseFrom(
+      public static edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value parseFrom(
           java.nio.ByteBuffer data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static VectorTile.Tile.Value parseFrom(
+      public static edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value parseFrom(
           java.nio.ByteBuffer data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static VectorTile.Tile.Value parseFrom(
+      public static edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static VectorTile.Tile.Value parseFrom(
+      public static edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static VectorTile.Tile.Value parseFrom(byte[] data)
+      public static edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static VectorTile.Tile.Value parseFrom(
+      public static edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static VectorTile.Tile.Value parseFrom(java.io.InputStream input)
+      public static edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static VectorTile.Tile.Value parseFrom(
+      public static edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
-      public static VectorTile.Tile.Value parseDelimitedFrom(java.io.InputStream input)
+
+      public static edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input);
       }
-      public static VectorTile.Tile.Value parseDelimitedFrom(
+
+      public static edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
-      public static VectorTile.Tile.Value parseFrom(
+      public static edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static VectorTile.Tile.Value parseFrom(
+      public static edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -843,13 +773,15 @@ public final class VectorTile {
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
+      @java.lang.Override
       public Builder newBuilderForType() { return newBuilder(); }
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
       }
-      public static Builder newBuilder(VectorTile.Tile.Value prototype) {
+      public static Builder newBuilder(edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
+      @java.lang.Override
       public Builder toBuilder() {
         return this == DEFAULT_INSTANCE
             ? new Builder() : new Builder().mergeFrom(this);
@@ -871,175 +803,182 @@ public final class VectorTile {
        */
       public static final class Builder extends
           com.google.protobuf.GeneratedMessageV3.ExtendableBuilder<
-              VectorTile.Tile.Value, Builder> implements
+            edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value, Builder> implements
           // @@protoc_insertion_point(builder_implements:vector_tile.Tile.Value)
-          VectorTile.Tile.ValueOrBuilder {
+          edu.colorado.cires.cmg.mvt.VectorTile.Tile.ValueOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-          return VectorTile.internal_static_vector_tile_Tile_Value_descriptor;
+            getDescriptor() {
+          return edu.colorado.cires.cmg.mvt.VectorTile.internal_static_vector_tile_Tile_Value_descriptor;
         }
 
+        @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-          return VectorTile.internal_static_vector_tile_Tile_Value_fieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return edu.colorado.cires.cmg.mvt.VectorTile.internal_static_vector_tile_Tile_Value_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  VectorTile.Tile.Value.class, VectorTile.Tile.Value.Builder.class);
+                  edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value.class, edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value.Builder.class);
         }
 
         // Construct using edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value.newBuilder()
         private Builder() {
-          //TODO legacy code -> GNDN
-//          maybeForceBuilderInitialization();
+
         }
 
         private Builder(
             com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
           super(parent);
-          //TODO legacy code -> GNDN
-//          maybeForceBuilderInitialization();
+
         }
-        //TODO legacy code -> GNDN
-//        private void maybeForceBuilderInitialization() {
-//          if (com.google.protobuf.GeneratedMessageV3
-//              .alwaysUseFieldBuilders) {
-//          }
-//        }
+        @java.lang.Override
         public Builder clear() {
           super.clear();
+          bitField0_ = 0;
           stringValue_ = "";
-          bitField0_ = (bitField0_ & ~0x00000001);
           floatValue_ = 0F;
-          bitField0_ = (bitField0_ & ~0x00000002);
           doubleValue_ = 0D;
-          bitField0_ = (bitField0_ & ~0x00000004);
           intValue_ = 0L;
-          bitField0_ = (bitField0_ & ~0x00000008);
           uintValue_ = 0L;
-          bitField0_ = (bitField0_ & ~0x00000010);
           sintValue_ = 0L;
-          bitField0_ = (bitField0_ & ~0x00000020);
           boolValue_ = false;
-          bitField0_ = (bitField0_ & ~0x00000040);
           return this;
         }
 
+        @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
-        getDescriptorForType() {
-          return VectorTile.internal_static_vector_tile_Tile_Value_descriptor;
+            getDescriptorForType() {
+          return edu.colorado.cires.cmg.mvt.VectorTile.internal_static_vector_tile_Tile_Value_descriptor;
         }
 
-        public VectorTile.Tile.Value getDefaultInstanceForType() {
-          return VectorTile.Tile.Value.getDefaultInstance();
+        @java.lang.Override
+        public edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value getDefaultInstanceForType() {
+          return edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value.getDefaultInstance();
         }
 
-        public VectorTile.Tile.Value build() {
-          VectorTile.Tile.Value result = buildPartial();
+        @java.lang.Override
+        public edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value build() {
+          edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
           return result;
         }
 
-        public VectorTile.Tile.Value buildPartial() {
-          VectorTile.Tile.Value result = new VectorTile.Tile.Value(this);
-          int from_bitField0_ = bitField0_;
-          int to_bitField0_ = 0;
-          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-            to_bitField0_ |= 0x00000001;
-          }
-          result.stringValue_ = stringValue_;
-          if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-            to_bitField0_ |= 0x00000002;
-          }
-          result.floatValue_ = floatValue_;
-          if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-            to_bitField0_ |= 0x00000004;
-          }
-          result.doubleValue_ = doubleValue_;
-          if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
-            to_bitField0_ |= 0x00000008;
-          }
-          result.intValue_ = intValue_;
-          if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
-            to_bitField0_ |= 0x00000010;
-          }
-          result.uintValue_ = uintValue_;
-          if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
-            to_bitField0_ |= 0x00000020;
-          }
-          result.sintValue_ = sintValue_;
-          if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
-            to_bitField0_ |= 0x00000040;
-          }
-          result.boolValue_ = boolValue_;
-          result.bitField0_ = to_bitField0_;
+        @java.lang.Override
+        public edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value buildPartial() {
+          edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value result = new edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
           onBuilt();
           return result;
         }
 
-        public Builder clone() {
-          return (Builder) super.clone();
+        private void buildPartial0(edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value result) {
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.stringValue_ = stringValue_;
+            to_bitField0_ |= 0x00000001;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.floatValue_ = floatValue_;
+            to_bitField0_ |= 0x00000002;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.doubleValue_ = doubleValue_;
+            to_bitField0_ |= 0x00000004;
+          }
+          if (((from_bitField0_ & 0x00000008) != 0)) {
+            result.intValue_ = intValue_;
+            to_bitField0_ |= 0x00000008;
+          }
+          if (((from_bitField0_ & 0x00000010) != 0)) {
+            result.uintValue_ = uintValue_;
+            to_bitField0_ |= 0x00000010;
+          }
+          if (((from_bitField0_ & 0x00000020) != 0)) {
+            result.sintValue_ = sintValue_;
+            to_bitField0_ |= 0x00000020;
+          }
+          if (((from_bitField0_ & 0x00000040) != 0)) {
+            result.boolValue_ = boolValue_;
+            to_bitField0_ |= 0x00000040;
+          }
+          result.bitField0_ |= to_bitField0_;
         }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
+        @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
+        @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
+        @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
+        @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
+        @java.lang.Override
         public <Type> Builder setExtension(
             com.google.protobuf.GeneratedMessage.GeneratedExtension<
-                VectorTile.Tile.Value, Type> extension,
+                edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value, Type> extension,
             Type value) {
-          return (Builder) super.setExtension(extension, value);
+          return super.setExtension(extension, value);
         }
+        @java.lang.Override
         public <Type> Builder setExtension(
             com.google.protobuf.GeneratedMessage.GeneratedExtension<
-                VectorTile.Tile.Value, java.util.List<Type>> extension,
+                edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value, java.util.List<Type>> extension,
             int index, Type value) {
-          return (Builder) super.setExtension(extension, index, value);
+          return super.setExtension(extension, index, value);
         }
+        @java.lang.Override
         public <Type> Builder addExtension(
             com.google.protobuf.GeneratedMessage.GeneratedExtension<
-                VectorTile.Tile.Value, java.util.List<Type>> extension,
+                edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value, java.util.List<Type>> extension,
             Type value) {
-          return (Builder) super.addExtension(extension, value);
+          return super.addExtension(extension, value);
         }
-        public <Type> Builder clearExtension(
+        @java.lang.Override
+        public <T> Builder clearExtension(
             com.google.protobuf.GeneratedMessage.GeneratedExtension<
-                VectorTile.Tile.Value, ?> extension) {
-          return (Builder) super.clearExtension(extension);
+                edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value, T> extension) {
+          return super.clearExtension(extension);
         }
+        @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof VectorTile.Tile.Value) {
-            return mergeFrom((VectorTile.Tile.Value)other);
+          if (other instanceof edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value) {
+            return mergeFrom((edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(VectorTile.Tile.Value other) {
-          if (other == VectorTile.Tile.Value.getDefaultInstance()) return this;
+        public Builder mergeFrom(edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value other) {
+          if (other == edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value.getDefaultInstance()) return this;
           if (other.hasStringValue()) {
-            bitField0_ |= 0x00000001;
             stringValue_ = other.stringValue_;
+            bitField0_ |= 0x00000001;
             onChanged();
           }
           if (other.hasFloatValue()) {
@@ -1061,11 +1000,12 @@ public final class VectorTile {
             setBoolValue(other.getBoolValue());
           }
           this.mergeExtensionFields(other);
-          this.mergeUnknownFields(other.unknownFields);
+          this.mergeUnknownFields(other.getUnknownFields());
           onChanged();
           return this;
         }
 
+        @java.lang.Override
         public final boolean isInitialized() {
           if (!extensionsAreInitialized()) {
             return false;
@@ -1073,21 +1013,70 @@ public final class VectorTile {
           return true;
         }
 
+        @java.lang.Override
         public Builder mergeFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          VectorTile.Tile.Value parsedMessage = null;
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
           try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  stringValue_ = input.readBytes();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 10
+                case 21: {
+                  floatValue_ = input.readFloat();
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 21
+                case 25: {
+                  doubleValue_ = input.readDouble();
+                  bitField0_ |= 0x00000004;
+                  break;
+                } // case 25
+                case 32: {
+                  intValue_ = input.readInt64();
+                  bitField0_ |= 0x00000008;
+                  break;
+                } // case 32
+                case 40: {
+                  uintValue_ = input.readUInt64();
+                  bitField0_ |= 0x00000010;
+                  break;
+                } // case 40
+                case 48: {
+                  sintValue_ = input.readSInt64();
+                  bitField0_ |= 0x00000020;
+                  break;
+                } // case 48
+                case 56: {
+                  boolValue_ = input.readBool();
+                  bitField0_ |= 0x00000040;
+                  break;
+                } // case 56
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (VectorTile.Tile.Value) e.getUnfinishedMessage();
             throw e.unwrapIOException();
           } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
+            onChanged();
+          } // finally
           return this;
         }
         private int bitField0_;
@@ -1099,9 +1088,10 @@ public final class VectorTile {
          * </pre>
          *
          * <code>optional string string_value = 1;</code>
+         * @return Whether the stringValue field is set.
          */
         public boolean hasStringValue() {
-          return ((bitField0_ & 0x00000001) == 0x00000001);
+          return ((bitField0_ & 0x00000001) != 0);
         }
         /**
          * <pre>
@@ -1109,6 +1099,7 @@ public final class VectorTile {
          * </pre>
          *
          * <code>optional string string_value = 1;</code>
+         * @return The stringValue.
          */
         public java.lang.String getStringValue() {
           java.lang.Object ref = stringValue_;
@@ -1130,12 +1121,13 @@ public final class VectorTile {
          * </pre>
          *
          * <code>optional string string_value = 1;</code>
+         * @return The bytes for stringValue.
          */
         public com.google.protobuf.ByteString
-        getStringValueBytes() {
+            getStringValueBytes() {
           java.lang.Object ref = stringValue_;
           if (ref instanceof String) {
-            com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString b = 
                 com.google.protobuf.ByteString.copyFromUtf8(
                     (java.lang.String) ref);
             stringValue_ = b;
@@ -1150,14 +1142,14 @@ public final class VectorTile {
          * </pre>
          *
          * <code>optional string string_value = 1;</code>
+         * @param value The stringValue to set.
+         * @return This builder for chaining.
          */
         public Builder setStringValue(
             java.lang.String value) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          bitField0_ |= 0x00000001;
+          if (value == null) { throw new NullPointerException(); }
           stringValue_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -1167,10 +1159,11 @@ public final class VectorTile {
          * </pre>
          *
          * <code>optional string string_value = 1;</code>
+         * @return This builder for chaining.
          */
         public Builder clearStringValue() {
-          bitField0_ = (bitField0_ & ~0x00000001);
           stringValue_ = getDefaultInstance().getStringValue();
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
           return this;
         }
@@ -1180,14 +1173,14 @@ public final class VectorTile {
          * </pre>
          *
          * <code>optional string string_value = 1;</code>
+         * @param value The bytes for stringValue to set.
+         * @return This builder for chaining.
          */
         public Builder setStringValueBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          bitField0_ |= 0x00000001;
+          if (value == null) { throw new NullPointerException(); }
           stringValue_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -1195,27 +1188,35 @@ public final class VectorTile {
         private float floatValue_ ;
         /**
          * <code>optional float float_value = 2;</code>
+         * @return Whether the floatValue field is set.
          */
+        @java.lang.Override
         public boolean hasFloatValue() {
-          return ((bitField0_ & 0x00000002) == 0x00000002);
+          return ((bitField0_ & 0x00000002) != 0);
         }
         /**
          * <code>optional float float_value = 2;</code>
+         * @return The floatValue.
          */
+        @java.lang.Override
         public float getFloatValue() {
           return floatValue_;
         }
         /**
          * <code>optional float float_value = 2;</code>
+         * @param value The floatValue to set.
+         * @return This builder for chaining.
          */
         public Builder setFloatValue(float value) {
-          bitField0_ |= 0x00000002;
+
           floatValue_ = value;
+          bitField0_ |= 0x00000002;
           onChanged();
           return this;
         }
         /**
          * <code>optional float float_value = 2;</code>
+         * @return This builder for chaining.
          */
         public Builder clearFloatValue() {
           bitField0_ = (bitField0_ & ~0x00000002);
@@ -1227,27 +1228,35 @@ public final class VectorTile {
         private double doubleValue_ ;
         /**
          * <code>optional double double_value = 3;</code>
+         * @return Whether the doubleValue field is set.
          */
+        @java.lang.Override
         public boolean hasDoubleValue() {
-          return ((bitField0_ & 0x00000004) == 0x00000004);
+          return ((bitField0_ & 0x00000004) != 0);
         }
         /**
          * <code>optional double double_value = 3;</code>
+         * @return The doubleValue.
          */
+        @java.lang.Override
         public double getDoubleValue() {
           return doubleValue_;
         }
         /**
          * <code>optional double double_value = 3;</code>
+         * @param value The doubleValue to set.
+         * @return This builder for chaining.
          */
         public Builder setDoubleValue(double value) {
-          bitField0_ |= 0x00000004;
+
           doubleValue_ = value;
+          bitField0_ |= 0x00000004;
           onChanged();
           return this;
         }
         /**
          * <code>optional double double_value = 3;</code>
+         * @return This builder for chaining.
          */
         public Builder clearDoubleValue() {
           bitField0_ = (bitField0_ & ~0x00000004);
@@ -1259,27 +1268,35 @@ public final class VectorTile {
         private long intValue_ ;
         /**
          * <code>optional int64 int_value = 4;</code>
+         * @return Whether the intValue field is set.
          */
+        @java.lang.Override
         public boolean hasIntValue() {
-          return ((bitField0_ & 0x00000008) == 0x00000008);
+          return ((bitField0_ & 0x00000008) != 0);
         }
         /**
          * <code>optional int64 int_value = 4;</code>
+         * @return The intValue.
          */
+        @java.lang.Override
         public long getIntValue() {
           return intValue_;
         }
         /**
          * <code>optional int64 int_value = 4;</code>
+         * @param value The intValue to set.
+         * @return This builder for chaining.
          */
         public Builder setIntValue(long value) {
-          bitField0_ |= 0x00000008;
+
           intValue_ = value;
+          bitField0_ |= 0x00000008;
           onChanged();
           return this;
         }
         /**
          * <code>optional int64 int_value = 4;</code>
+         * @return This builder for chaining.
          */
         public Builder clearIntValue() {
           bitField0_ = (bitField0_ & ~0x00000008);
@@ -1291,27 +1308,35 @@ public final class VectorTile {
         private long uintValue_ ;
         /**
          * <code>optional uint64 uint_value = 5;</code>
+         * @return Whether the uintValue field is set.
          */
+        @java.lang.Override
         public boolean hasUintValue() {
-          return ((bitField0_ & 0x00000010) == 0x00000010);
+          return ((bitField0_ & 0x00000010) != 0);
         }
         /**
          * <code>optional uint64 uint_value = 5;</code>
+         * @return The uintValue.
          */
+        @java.lang.Override
         public long getUintValue() {
           return uintValue_;
         }
         /**
          * <code>optional uint64 uint_value = 5;</code>
+         * @param value The uintValue to set.
+         * @return This builder for chaining.
          */
         public Builder setUintValue(long value) {
-          bitField0_ |= 0x00000010;
+
           uintValue_ = value;
+          bitField0_ |= 0x00000010;
           onChanged();
           return this;
         }
         /**
          * <code>optional uint64 uint_value = 5;</code>
+         * @return This builder for chaining.
          */
         public Builder clearUintValue() {
           bitField0_ = (bitField0_ & ~0x00000010);
@@ -1323,27 +1348,35 @@ public final class VectorTile {
         private long sintValue_ ;
         /**
          * <code>optional sint64 sint_value = 6;</code>
+         * @return Whether the sintValue field is set.
          */
+        @java.lang.Override
         public boolean hasSintValue() {
-          return ((bitField0_ & 0x00000020) == 0x00000020);
+          return ((bitField0_ & 0x00000020) != 0);
         }
         /**
          * <code>optional sint64 sint_value = 6;</code>
+         * @return The sintValue.
          */
+        @java.lang.Override
         public long getSintValue() {
           return sintValue_;
         }
         /**
          * <code>optional sint64 sint_value = 6;</code>
+         * @param value The sintValue to set.
+         * @return This builder for chaining.
          */
         public Builder setSintValue(long value) {
-          bitField0_ |= 0x00000020;
+
           sintValue_ = value;
+          bitField0_ |= 0x00000020;
           onChanged();
           return this;
         }
         /**
          * <code>optional sint64 sint_value = 6;</code>
+         * @return This builder for chaining.
          */
         public Builder clearSintValue() {
           bitField0_ = (bitField0_ & ~0x00000020);
@@ -1355,27 +1388,35 @@ public final class VectorTile {
         private boolean boolValue_ ;
         /**
          * <code>optional bool bool_value = 7;</code>
+         * @return Whether the boolValue field is set.
          */
+        @java.lang.Override
         public boolean hasBoolValue() {
-          return ((bitField0_ & 0x00000040) == 0x00000040);
+          return ((bitField0_ & 0x00000040) != 0);
         }
         /**
          * <code>optional bool bool_value = 7;</code>
+         * @return The boolValue.
          */
+        @java.lang.Override
         public boolean getBoolValue() {
           return boolValue_;
         }
         /**
          * <code>optional bool bool_value = 7;</code>
+         * @param value The boolValue to set.
+         * @return This builder for chaining.
          */
         public Builder setBoolValue(boolean value) {
-          bitField0_ |= 0x00000040;
+
           boolValue_ = value;
+          bitField0_ |= 0x00000040;
           onChanged();
           return this;
         }
         /**
          * <code>optional bool bool_value = 7;</code>
+         * @return This builder for chaining.
          */
         public Builder clearBoolValue() {
           bitField0_ = (bitField0_ & ~0x00000040);
@@ -1383,11 +1424,13 @@ public final class VectorTile {
           onChanged();
           return this;
         }
+        @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
           return super.setUnknownFields(unknownFields);
         }
 
+        @java.lang.Override
         public final Builder mergeUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
           return super.mergeUnknownFields(unknownFields);
@@ -1398,22 +1441,34 @@ public final class VectorTile {
       }
 
       // @@protoc_insertion_point(class_scope:vector_tile.Tile.Value)
-      private static final VectorTile.Tile.Value DEFAULT_INSTANCE;
+      private static final edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value DEFAULT_INSTANCE;
       static {
-        DEFAULT_INSTANCE = new VectorTile.Tile.Value();
+        DEFAULT_INSTANCE = new edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value();
       }
 
-      public static VectorTile.Tile.Value getDefaultInstance() {
+      public static edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value getDefaultInstance() {
         return DEFAULT_INSTANCE;
       }
 
       @java.lang.Deprecated public static final com.google.protobuf.Parser<Value>
           PARSER = new com.google.protobuf.AbstractParser<Value>() {
+        @java.lang.Override
         public Value parsePartialFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Value(input, extensionRegistry);
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
         }
       };
 
@@ -1426,7 +1481,8 @@ public final class VectorTile {
         return PARSER;
       }
 
-      public VectorTile.Tile.Value getDefaultInstanceForType() {
+      @java.lang.Override
+      public edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
@@ -1438,10 +1494,12 @@ public final class VectorTile {
 
       /**
        * <code>optional uint64 id = 1 [default = 0];</code>
+       * @return Whether the id field is set.
        */
       boolean hasId();
       /**
        * <code>optional uint64 id = 1 [default = 0];</code>
+       * @return The id.
        */
       long getId();
 
@@ -1454,6 +1512,7 @@ public final class VectorTile {
        * </pre>
        *
        * <code>repeated uint32 tags = 2 [packed = true];</code>
+       * @return A list containing the tags.
        */
       java.util.List<java.lang.Integer> getTagsList();
       /**
@@ -1465,6 +1524,7 @@ public final class VectorTile {
        * </pre>
        *
        * <code>repeated uint32 tags = 2 [packed = true];</code>
+       * @return The count of tags.
        */
       int getTagsCount();
       /**
@@ -1476,6 +1536,8 @@ public final class VectorTile {
        * </pre>
        *
        * <code>repeated uint32 tags = 2 [packed = true];</code>
+       * @param index The index of the element to return.
+       * @return The tags at the given index.
        */
       int getTags(int index);
 
@@ -1485,6 +1547,7 @@ public final class VectorTile {
        * </pre>
        *
        * <code>optional .vector_tile.Tile.GeomType type = 3 [default = UNKNOWN];</code>
+       * @return Whether the type field is set.
        */
       boolean hasType();
       /**
@@ -1493,8 +1556,9 @@ public final class VectorTile {
        * </pre>
        *
        * <code>optional .vector_tile.Tile.GeomType type = 3 [default = UNKNOWN];</code>
+       * @return The type.
        */
-      VectorTile.Tile.GeomType getType();
+      edu.colorado.cires.cmg.mvt.VectorTile.Tile.GeomType getType();
 
       /**
        * <pre>
@@ -1504,6 +1568,7 @@ public final class VectorTile {
        * </pre>
        *
        * <code>repeated uint32 geometry = 4 [packed = true];</code>
+       * @return A list containing the geometry.
        */
       java.util.List<java.lang.Integer> getGeometryList();
       /**
@@ -1514,6 +1579,7 @@ public final class VectorTile {
        * </pre>
        *
        * <code>repeated uint32 geometry = 4 [packed = true];</code>
+       * @return The count of geometry.
        */
       int getGeometryCount();
       /**
@@ -1524,6 +1590,8 @@ public final class VectorTile {
        * </pre>
        *
        * <code>repeated uint32 geometry = 4 [packed = true];</code>
+       * @param index The index of the element to return.
+       * @return The geometry at the given index.
        */
       int getGeometry(int index);
     }
@@ -1534,159 +1602,65 @@ public final class VectorTile {
      *
      * Protobuf type {@code vector_tile.Tile.Feature}
      */
-    public  static final class Feature extends
+    public static final class Feature extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:vector_tile.Tile.Feature)
         FeatureOrBuilder {
-      private static final long serialVersionUID = 0L;
+    private static final long serialVersionUID = 0L;
       // Use Feature.newBuilder() to construct.
       private Feature(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
         super(builder);
       }
       private Feature() {
-        id_ = 0L;
-        tags_ = java.util.Collections.emptyList();
+        tags_ = emptyIntList();
         type_ = 0;
-        geometry_ = java.util.Collections.emptyList();
+        geometry_ = emptyIntList();
       }
 
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-      getUnknownFields() {
-        return this.unknownFields;
-      }
-      private Feature(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        this();
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!parseUnknownField(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-              case 8: {
-                bitField0_ |= 0x00000001;
-                id_ = input.readUInt64();
-                break;
-              }
-              case 16: {
-                if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                  tags_ = new java.util.ArrayList<java.lang.Integer>();
-                  mutable_bitField0_ |= 0x00000002;
-                }
-                tags_.add(input.readUInt32());
-                break;
-              }
-              case 18: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                if (!((mutable_bitField0_ & 0x00000002) == 0x00000002) && input.getBytesUntilLimit() > 0) {
-                  tags_ = new java.util.ArrayList<java.lang.Integer>();
-                  mutable_bitField0_ |= 0x00000002;
-                }
-                while (input.getBytesUntilLimit() > 0) {
-                  tags_.add(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              }
-              case 24: {
-                int rawValue = input.readEnum();
-                VectorTile.Tile.GeomType value = VectorTile.Tile.GeomType.valueOf(rawValue);
-                if (value == null) {
-                  unknownFields.mergeVarintField(3, rawValue);
-                } else {
-                  bitField0_ |= 0x00000002;
-                  type_ = rawValue;
-                }
-                break;
-              }
-              case 32: {
-                if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-                  geometry_ = new java.util.ArrayList<java.lang.Integer>();
-                  mutable_bitField0_ |= 0x00000008;
-                }
-                geometry_.add(input.readUInt32());
-                break;
-              }
-              case 34: {
-                int length = input.readRawVarint32();
-                int limit = input.pushLimit(length);
-                if (!((mutable_bitField0_ & 0x00000008) == 0x00000008) && input.getBytesUntilLimit() > 0) {
-                  geometry_ = new java.util.ArrayList<java.lang.Integer>();
-                  mutable_bitField0_ |= 0x00000008;
-                }
-                while (input.getBytesUntilLimit() > 0) {
-                  geometry_.add(input.readUInt32());
-                }
-                input.popLimit(limit);
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
-              e).setUnfinishedMessage(this);
-        } finally {
-          if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-            tags_ = java.util.Collections.unmodifiableList(tags_);
-          }
-          if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-            geometry_ = java.util.Collections.unmodifiableList(geometry_);
-          }
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
-      }
-      public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
-        return VectorTile.internal_static_vector_tile_Tile_Feature_descriptor;
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Feature();
       }
 
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return edu.colorado.cires.cmg.mvt.VectorTile.internal_static_vector_tile_Tile_Feature_descriptor;
+      }
+
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
-        return VectorTile.internal_static_vector_tile_Tile_Feature_fieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return edu.colorado.cires.cmg.mvt.VectorTile.internal_static_vector_tile_Tile_Feature_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                VectorTile.Tile.Feature.class, VectorTile.Tile.Feature.Builder.class);
+                edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature.class, edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature.Builder.class);
       }
 
       private int bitField0_;
       public static final int ID_FIELD_NUMBER = 1;
-      private long id_;
+      private long id_ = 0L;
       /**
        * <code>optional uint64 id = 1 [default = 0];</code>
+       * @return Whether the id field is set.
        */
+      @java.lang.Override
       public boolean hasId() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <code>optional uint64 id = 1 [default = 0];</code>
+       * @return The id.
        */
+      @java.lang.Override
       public long getId() {
         return id_;
       }
 
       public static final int TAGS_FIELD_NUMBER = 2;
-      private java.util.List<java.lang.Integer> tags_;
+      @SuppressWarnings("serial")
+      private com.google.protobuf.Internal.IntList tags_ =
+          emptyIntList();
       /**
        * <pre>
        * Tags of this feature are encoded as repeated pairs of
@@ -1696,9 +1670,11 @@ public final class VectorTile {
        * </pre>
        *
        * <code>repeated uint32 tags = 2 [packed = true];</code>
+       * @return A list containing the tags.
        */
+      @java.lang.Override
       public java.util.List<java.lang.Integer>
-      getTagsList() {
+          getTagsList() {
         return tags_;
       }
       /**
@@ -1710,6 +1686,7 @@ public final class VectorTile {
        * </pre>
        *
        * <code>repeated uint32 tags = 2 [packed = true];</code>
+       * @return The count of tags.
        */
       public int getTagsCount() {
         return tags_.size();
@@ -1723,23 +1700,26 @@ public final class VectorTile {
        * </pre>
        *
        * <code>repeated uint32 tags = 2 [packed = true];</code>
+       * @param index The index of the element to return.
+       * @return The tags at the given index.
        */
       public int getTags(int index) {
-        return tags_.get(index);
+        return tags_.getInt(index);
       }
       private int tagsMemoizedSerializedSize = -1;
 
       public static final int TYPE_FIELD_NUMBER = 3;
-      private int type_;
+      private int type_ = 0;
       /**
        * <pre>
        * The type of geometry stored in this feature.
        * </pre>
        *
        * <code>optional .vector_tile.Tile.GeomType type = 3 [default = UNKNOWN];</code>
+       * @return Whether the type field is set.
        */
-      public boolean hasType() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
+      @java.lang.Override public boolean hasType() {
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <pre>
@@ -1747,14 +1727,17 @@ public final class VectorTile {
        * </pre>
        *
        * <code>optional .vector_tile.Tile.GeomType type = 3 [default = UNKNOWN];</code>
+       * @return The type.
        */
-      public VectorTile.Tile.GeomType getType() {
-        VectorTile.Tile.GeomType result = VectorTile.Tile.GeomType.valueOf(type_);
-        return result == null ? VectorTile.Tile.GeomType.UNKNOWN : result;
+      @java.lang.Override public edu.colorado.cires.cmg.mvt.VectorTile.Tile.GeomType getType() {
+        edu.colorado.cires.cmg.mvt.VectorTile.Tile.GeomType result = edu.colorado.cires.cmg.mvt.VectorTile.Tile.GeomType.forNumber(type_);
+        return result == null ? edu.colorado.cires.cmg.mvt.VectorTile.Tile.GeomType.UNKNOWN : result;
       }
 
       public static final int GEOMETRY_FIELD_NUMBER = 4;
-      private java.util.List<java.lang.Integer> geometry_;
+      @SuppressWarnings("serial")
+      private com.google.protobuf.Internal.IntList geometry_ =
+          emptyIntList();
       /**
        * <pre>
        * Contains a stream of commands and parameters (vertices).
@@ -1763,9 +1746,11 @@ public final class VectorTile {
        * </pre>
        *
        * <code>repeated uint32 geometry = 4 [packed = true];</code>
+       * @return A list containing the geometry.
        */
+      @java.lang.Override
       public java.util.List<java.lang.Integer>
-      getGeometryList() {
+          getGeometryList() {
         return geometry_;
       }
       /**
@@ -1776,6 +1761,7 @@ public final class VectorTile {
        * </pre>
        *
        * <code>repeated uint32 geometry = 4 [packed = true];</code>
+       * @return The count of geometry.
        */
       public int getGeometryCount() {
         return geometry_.size();
@@ -1788,13 +1774,16 @@ public final class VectorTile {
        * </pre>
        *
        * <code>repeated uint32 geometry = 4 [packed = true];</code>
+       * @param index The index of the element to return.
+       * @return The geometry at the given index.
        */
       public int getGeometry(int index) {
-        return geometry_.get(index);
+        return geometry_.getInt(index);
       }
       private int geometryMemoizedSerializedSize = -1;
 
       private byte memoizedIsInitialized = -1;
+      @java.lang.Override
       public final boolean isInitialized() {
         byte isInitialized = memoizedIsInitialized;
         if (isInitialized == 1) return true;
@@ -1804,10 +1793,11 @@ public final class VectorTile {
         return true;
       }
 
+      @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
-          throws java.io.IOException {
+                          throws java.io.IOException {
         getSerializedSize();
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           output.writeUInt64(1, id_);
         }
         if (getTagsList().size() > 0) {
@@ -1815,9 +1805,9 @@ public final class VectorTile {
           output.writeUInt32NoTag(tagsMemoizedSerializedSize);
         }
         for (int i = 0; i < tags_.size(); i++) {
-          output.writeUInt32NoTag(tags_.get(i));
+          output.writeUInt32NoTag(tags_.getInt(i));
         }
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           output.writeEnum(3, type_);
         }
         if (getGeometryList().size() > 0) {
@@ -1825,25 +1815,26 @@ public final class VectorTile {
           output.writeUInt32NoTag(geometryMemoizedSerializedSize);
         }
         for (int i = 0; i < geometry_.size(); i++) {
-          output.writeUInt32NoTag(geometry_.get(i));
+          output.writeUInt32NoTag(geometry_.getInt(i));
         }
-        unknownFields.writeTo(output);
+        getUnknownFields().writeTo(output);
       }
 
+      @java.lang.Override
       public int getSerializedSize() {
         int size = memoizedSize;
         if (size != -1) return size;
 
         size = 0;
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           size += com.google.protobuf.CodedOutputStream
-              .computeUInt64Size(1, id_);
+            .computeUInt64Size(1, id_);
         }
         {
           int dataSize = 0;
           for (int i = 0; i < tags_.size(); i++) {
             dataSize += com.google.protobuf.CodedOutputStream
-                .computeUInt32SizeNoTag(tags_.get(i));
+              .computeUInt32SizeNoTag(tags_.getInt(i));
           }
           size += dataSize;
           if (!getTagsList().isEmpty()) {
@@ -1853,15 +1844,15 @@ public final class VectorTile {
           }
           tagsMemoizedSerializedSize = dataSize;
         }
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           size += com.google.protobuf.CodedOutputStream
-              .computeEnumSize(3, type_);
+            .computeEnumSize(3, type_);
         }
         {
           int dataSize = 0;
           for (int i = 0; i < geometry_.size(); i++) {
             dataSize += com.google.protobuf.CodedOutputStream
-                .computeUInt32SizeNoTag(geometry_.get(i));
+              .computeUInt32SizeNoTag(geometry_.getInt(i));
           }
           size += dataSize;
           if (!getGeometryList().isEmpty()) {
@@ -1871,7 +1862,7 @@ public final class VectorTile {
           }
           geometryMemoizedSerializedSize = dataSize;
         }
-        size += unknownFields.getSerializedSize();
+        size += getUnknownFields().getSerializedSize();
         memoizedSize = size;
         return size;
       }
@@ -1879,29 +1870,28 @@ public final class VectorTile {
       @java.lang.Override
       public boolean equals(final java.lang.Object obj) {
         if (obj == this) {
-          return true;
+         return true;
         }
-        if (!(obj instanceof VectorTile.Tile.Feature)) {
+        if (!(obj instanceof edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature)) {
           return super.equals(obj);
         }
-        VectorTile.Tile.Feature other = (VectorTile.Tile.Feature) obj;
+        edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature other = (edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature) obj;
 
-        boolean result = true;
-        result = result && (hasId() == other.hasId());
+        if (hasId() != other.hasId()) return false;
         if (hasId()) {
-          result = result && (getId()
-              == other.getId());
+          if (getId()
+              != other.getId()) return false;
         }
-        result = result && getTagsList()
-            .equals(other.getTagsList());
-        result = result && (hasType() == other.hasType());
+        if (!getTagsList()
+            .equals(other.getTagsList())) return false;
+        if (hasType() != other.hasType()) return false;
         if (hasType()) {
-          result = result && type_ == other.type_;
+          if (type_ != other.type_) return false;
         }
-        result = result && getGeometryList()
-            .equals(other.getGeometryList());
-        result = result && unknownFields.equals(other.unknownFields);
-        return result;
+        if (!getGeometryList()
+            .equals(other.getGeometryList())) return false;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        return true;
       }
 
       @java.lang.Override
@@ -1928,74 +1918,76 @@ public final class VectorTile {
           hash = (37 * hash) + GEOMETRY_FIELD_NUMBER;
           hash = (53 * hash) + getGeometryList().hashCode();
         }
-        hash = (29 * hash) + unknownFields.hashCode();
+        hash = (29 * hash) + getUnknownFields().hashCode();
         memoizedHashCode = hash;
         return hash;
       }
 
-      public static VectorTile.Tile.Feature parseFrom(
+      public static edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature parseFrom(
           java.nio.ByteBuffer data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static VectorTile.Tile.Feature parseFrom(
+      public static edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature parseFrom(
           java.nio.ByteBuffer data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static VectorTile.Tile.Feature parseFrom(
+      public static edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static VectorTile.Tile.Feature parseFrom(
+      public static edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static VectorTile.Tile.Feature parseFrom(byte[] data)
+      public static edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static VectorTile.Tile.Feature parseFrom(
+      public static edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static VectorTile.Tile.Feature parseFrom(java.io.InputStream input)
+      public static edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static VectorTile.Tile.Feature parseFrom(
+      public static edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
-      public static VectorTile.Tile.Feature parseDelimitedFrom(java.io.InputStream input)
+
+      public static edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input);
       }
-      public static VectorTile.Tile.Feature parseDelimitedFrom(
+
+      public static edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
-      public static VectorTile.Tile.Feature parseFrom(
+      public static edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static VectorTile.Tile.Feature parseFrom(
+      public static edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -2003,13 +1995,15 @@ public final class VectorTile {
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
+      @java.lang.Override
       public Builder newBuilderForType() { return newBuilder(); }
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
       }
-      public static Builder newBuilder(VectorTile.Tile.Feature prototype) {
+      public static Builder newBuilder(edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
+      @java.lang.Override
       public Builder toBuilder() {
         return this == DEFAULT_INSTANCE
             ? new Builder() : new Builder().mergeFrom(this);
@@ -2031,137 +2025,143 @@ public final class VectorTile {
       public static final class Builder extends
           com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:vector_tile.Tile.Feature)
-          VectorTile.Tile.FeatureOrBuilder {
+          edu.colorado.cires.cmg.mvt.VectorTile.Tile.FeatureOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-          return VectorTile.internal_static_vector_tile_Tile_Feature_descriptor;
+            getDescriptor() {
+          return edu.colorado.cires.cmg.mvt.VectorTile.internal_static_vector_tile_Tile_Feature_descriptor;
         }
 
+        @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-          return VectorTile.internal_static_vector_tile_Tile_Feature_fieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return edu.colorado.cires.cmg.mvt.VectorTile.internal_static_vector_tile_Tile_Feature_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  VectorTile.Tile.Feature.class, VectorTile.Tile.Feature.Builder.class);
+                  edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature.class, edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature.Builder.class);
         }
 
         // Construct using edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature.newBuilder()
         private Builder() {
-          //TODO legacy code -> GNDN
-//          maybeForceBuilderInitialization();
+
         }
 
         private Builder(
             com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
           super(parent);
-          //TODO legacy code -> GNDN
-//          maybeForceBuilderInitialization();
+
         }
-        //TODO legacy code -> GNDN
-//        private void maybeForceBuilderInitialization() {
-//          if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
-//          }
-//        }
+        @java.lang.Override
         public Builder clear() {
           super.clear();
+          bitField0_ = 0;
           id_ = 0L;
-          bitField0_ = (bitField0_ & ~0x00000001);
-          tags_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          tags_ = emptyIntList();
           type_ = 0;
-          bitField0_ = (bitField0_ & ~0x00000004);
-          geometry_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          geometry_ = emptyIntList();
           return this;
         }
 
+        @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
-        getDescriptorForType() {
-          return VectorTile.internal_static_vector_tile_Tile_Feature_descriptor;
+            getDescriptorForType() {
+          return edu.colorado.cires.cmg.mvt.VectorTile.internal_static_vector_tile_Tile_Feature_descriptor;
         }
 
-        public VectorTile.Tile.Feature getDefaultInstanceForType() {
-          return VectorTile.Tile.Feature.getDefaultInstance();
+        @java.lang.Override
+        public edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature getDefaultInstanceForType() {
+          return edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature.getDefaultInstance();
         }
 
-        public VectorTile.Tile.Feature build() {
-          VectorTile.Tile.Feature result = buildPartial();
+        @java.lang.Override
+        public edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature build() {
+          edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
           return result;
         }
 
-        public VectorTile.Tile.Feature buildPartial() {
-          VectorTile.Tile.Feature result = new VectorTile.Tile.Feature(this);
-          int from_bitField0_ = bitField0_;
-          int to_bitField0_ = 0;
-          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-            to_bitField0_ |= 0x00000001;
-          }
-          result.id_ = id_;
-          if (((bitField0_ & 0x00000002) == 0x00000002)) {
-            tags_ = java.util.Collections.unmodifiableList(tags_);
-            bitField0_ = (bitField0_ & ~0x00000002);
-          }
-          result.tags_ = tags_;
-          if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-            to_bitField0_ |= 0x00000002;
-          }
-          result.type_ = type_;
-          if (((bitField0_ & 0x00000008) == 0x00000008)) {
-            geometry_ = java.util.Collections.unmodifiableList(geometry_);
-            bitField0_ = (bitField0_ & ~0x00000008);
-          }
-          result.geometry_ = geometry_;
-          result.bitField0_ = to_bitField0_;
+        @java.lang.Override
+        public edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature buildPartial() {
+          edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature result = new edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature(this);
+          if (bitField0_ != 0) { buildPartial0(result); }
           onBuilt();
           return result;
         }
 
-        public Builder clone() {
-          return (Builder) super.clone();
+        private void buildPartial0(edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature result) {
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.id_ = id_;
+            to_bitField0_ |= 0x00000001;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            tags_.makeImmutable();
+            result.tags_ = tags_;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.type_ = type_;
+            to_bitField0_ |= 0x00000002;
+          }
+          if (((from_bitField0_ & 0x00000008) != 0)) {
+            geometry_.makeImmutable();
+            result.geometry_ = geometry_;
+          }
+          result.bitField0_ |= to_bitField0_;
         }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
+        @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
+        @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
+        @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
+        @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
+        @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof VectorTile.Tile.Feature) {
-            return mergeFrom((VectorTile.Tile.Feature)other);
+          if (other instanceof edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature) {
+            return mergeFrom((edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(VectorTile.Tile.Feature other) {
-          if (other == VectorTile.Tile.Feature.getDefaultInstance()) return this;
+        public Builder mergeFrom(edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature other) {
+          if (other == edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature.getDefaultInstance()) return this;
           if (other.hasId()) {
             setId(other.getId());
           }
           if (!other.tags_.isEmpty()) {
             if (tags_.isEmpty()) {
               tags_ = other.tags_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              tags_.makeImmutable();
+              bitField0_ |= 0x00000002;
             } else {
               ensureTagsIsMutable();
               tags_.addAll(other.tags_);
@@ -2174,37 +2174,102 @@ public final class VectorTile {
           if (!other.geometry_.isEmpty()) {
             if (geometry_.isEmpty()) {
               geometry_ = other.geometry_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              geometry_.makeImmutable();
+              bitField0_ |= 0x00000008;
             } else {
               ensureGeometryIsMutable();
               geometry_.addAll(other.geometry_);
             }
             onChanged();
           }
-          this.mergeUnknownFields(other.unknownFields);
+          this.mergeUnknownFields(other.getUnknownFields());
           onChanged();
           return this;
         }
 
+        @java.lang.Override
         public final boolean isInitialized() {
           return true;
         }
 
+        @java.lang.Override
         public Builder mergeFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          VectorTile.Tile.Feature parsedMessage = null;
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
           try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 8: {
+                  id_ = input.readUInt64();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 8
+                case 16: {
+                  int v = input.readUInt32();
+                  ensureTagsIsMutable();
+                  tags_.addInt(v);
+                  break;
+                } // case 16
+                case 18: {
+                  int length = input.readRawVarint32();
+                  int limit = input.pushLimit(length);
+                  ensureTagsIsMutable();
+                  while (input.getBytesUntilLimit() > 0) {
+                    tags_.addInt(input.readUInt32());
+                  }
+                  input.popLimit(limit);
+                  break;
+                } // case 18
+                case 24: {
+                  int tmpRaw = input.readEnum();
+                  edu.colorado.cires.cmg.mvt.VectorTile.Tile.GeomType tmpValue =
+                      edu.colorado.cires.cmg.mvt.VectorTile.Tile.GeomType.forNumber(tmpRaw);
+                  if (tmpValue == null) {
+                    mergeUnknownVarintField(3, tmpRaw);
+                  } else {
+                    type_ = tmpRaw;
+                    bitField0_ |= 0x00000004;
+                  }
+                  break;
+                } // case 24
+                case 32: {
+                  int v = input.readUInt32();
+                  ensureGeometryIsMutable();
+                  geometry_.addInt(v);
+                  break;
+                } // case 32
+                case 34: {
+                  int length = input.readRawVarint32();
+                  int limit = input.pushLimit(length);
+                  ensureGeometryIsMutable();
+                  while (input.getBytesUntilLimit() > 0) {
+                    geometry_.addInt(input.readUInt32());
+                  }
+                  input.popLimit(limit);
+                  break;
+                } // case 34
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (VectorTile.Tile.Feature) e.getUnfinishedMessage();
             throw e.unwrapIOException();
           } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
+            onChanged();
+          } // finally
           return this;
         }
         private int bitField0_;
@@ -2212,27 +2277,35 @@ public final class VectorTile {
         private long id_ ;
         /**
          * <code>optional uint64 id = 1 [default = 0];</code>
+         * @return Whether the id field is set.
          */
+        @java.lang.Override
         public boolean hasId() {
-          return ((bitField0_ & 0x00000001) == 0x00000001);
+          return ((bitField0_ & 0x00000001) != 0);
         }
         /**
          * <code>optional uint64 id = 1 [default = 0];</code>
+         * @return The id.
          */
+        @java.lang.Override
         public long getId() {
           return id_;
         }
         /**
          * <code>optional uint64 id = 1 [default = 0];</code>
+         * @param value The id to set.
+         * @return This builder for chaining.
          */
         public Builder setId(long value) {
-          bitField0_ |= 0x00000001;
+
           id_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
         /**
          * <code>optional uint64 id = 1 [default = 0];</code>
+         * @return This builder for chaining.
          */
         public Builder clearId() {
           bitField0_ = (bitField0_ & ~0x00000001);
@@ -2241,12 +2314,12 @@ public final class VectorTile {
           return this;
         }
 
-        private java.util.List<java.lang.Integer> tags_ = java.util.Collections.emptyList();
+        private com.google.protobuf.Internal.IntList tags_ = emptyIntList();
         private void ensureTagsIsMutable() {
-          if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-            tags_ = new java.util.ArrayList<java.lang.Integer>(tags_);
-            bitField0_ |= 0x00000002;
+          if (!tags_.isModifiable()) {
+            tags_ = makeMutableCopy(tags_);
           }
+          bitField0_ |= 0x00000002;
         }
         /**
          * <pre>
@@ -2257,10 +2330,12 @@ public final class VectorTile {
          * </pre>
          *
          * <code>repeated uint32 tags = 2 [packed = true];</code>
+         * @return A list containing the tags.
          */
         public java.util.List<java.lang.Integer>
-        getTagsList() {
-          return java.util.Collections.unmodifiableList(tags_);
+            getTagsList() {
+          tags_.makeImmutable();
+          return tags_;
         }
         /**
          * <pre>
@@ -2271,6 +2346,7 @@ public final class VectorTile {
          * </pre>
          *
          * <code>repeated uint32 tags = 2 [packed = true];</code>
+         * @return The count of tags.
          */
         public int getTagsCount() {
           return tags_.size();
@@ -2284,9 +2360,11 @@ public final class VectorTile {
          * </pre>
          *
          * <code>repeated uint32 tags = 2 [packed = true];</code>
+         * @param index The index of the element to return.
+         * @return The tags at the given index.
          */
         public int getTags(int index) {
-          return tags_.get(index);
+          return tags_.getInt(index);
         }
         /**
          * <pre>
@@ -2297,11 +2375,16 @@ public final class VectorTile {
          * </pre>
          *
          * <code>repeated uint32 tags = 2 [packed = true];</code>
+         * @param index The index to set the value at.
+         * @param value The tags to set.
+         * @return This builder for chaining.
          */
         public Builder setTags(
             int index, int value) {
+
           ensureTagsIsMutable();
-          tags_.set(index, value);
+          tags_.setInt(index, value);
+          bitField0_ |= 0x00000002;
           onChanged();
           return this;
         }
@@ -2314,10 +2397,14 @@ public final class VectorTile {
          * </pre>
          *
          * <code>repeated uint32 tags = 2 [packed = true];</code>
+         * @param value The tags to add.
+         * @return This builder for chaining.
          */
         public Builder addTags(int value) {
+
           ensureTagsIsMutable();
-          tags_.add(value);
+          tags_.addInt(value);
+          bitField0_ |= 0x00000002;
           onChanged();
           return this;
         }
@@ -2330,12 +2417,15 @@ public final class VectorTile {
          * </pre>
          *
          * <code>repeated uint32 tags = 2 [packed = true];</code>
+         * @param values The tags to add.
+         * @return This builder for chaining.
          */
         public Builder addAllTags(
             java.lang.Iterable<? extends java.lang.Integer> values) {
           ensureTagsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
               values, tags_);
+          bitField0_ |= 0x00000002;
           onChanged();
           return this;
         }
@@ -2348,9 +2438,10 @@ public final class VectorTile {
          * </pre>
          *
          * <code>repeated uint32 tags = 2 [packed = true];</code>
+         * @return This builder for chaining.
          */
         public Builder clearTags() {
-          tags_ = java.util.Collections.emptyList();
+          tags_ = emptyIntList();
           bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
           return this;
@@ -2363,9 +2454,10 @@ public final class VectorTile {
          * </pre>
          *
          * <code>optional .vector_tile.Tile.GeomType type = 3 [default = UNKNOWN];</code>
+         * @return Whether the type field is set.
          */
-        public boolean hasType() {
-          return ((bitField0_ & 0x00000004) == 0x00000004);
+        @java.lang.Override public boolean hasType() {
+          return ((bitField0_ & 0x00000004) != 0);
         }
         /**
          * <pre>
@@ -2373,10 +2465,12 @@ public final class VectorTile {
          * </pre>
          *
          * <code>optional .vector_tile.Tile.GeomType type = 3 [default = UNKNOWN];</code>
+         * @return The type.
          */
-        public VectorTile.Tile.GeomType getType() {
-          VectorTile.Tile.GeomType result = VectorTile.Tile.GeomType.valueOf(type_);
-          return result == null ? VectorTile.Tile.GeomType.UNKNOWN : result;
+        @java.lang.Override
+        public edu.colorado.cires.cmg.mvt.VectorTile.Tile.GeomType getType() {
+          edu.colorado.cires.cmg.mvt.VectorTile.Tile.GeomType result = edu.colorado.cires.cmg.mvt.VectorTile.Tile.GeomType.forNumber(type_);
+          return result == null ? edu.colorado.cires.cmg.mvt.VectorTile.Tile.GeomType.UNKNOWN : result;
         }
         /**
          * <pre>
@@ -2384,8 +2478,10 @@ public final class VectorTile {
          * </pre>
          *
          * <code>optional .vector_tile.Tile.GeomType type = 3 [default = UNKNOWN];</code>
+         * @param value The type to set.
+         * @return This builder for chaining.
          */
-        public Builder setType(VectorTile.Tile.GeomType value) {
+        public Builder setType(edu.colorado.cires.cmg.mvt.VectorTile.Tile.GeomType value) {
           if (value == null) {
             throw new NullPointerException();
           }
@@ -2400,6 +2496,7 @@ public final class VectorTile {
          * </pre>
          *
          * <code>optional .vector_tile.Tile.GeomType type = 3 [default = UNKNOWN];</code>
+         * @return This builder for chaining.
          */
         public Builder clearType() {
           bitField0_ = (bitField0_ & ~0x00000004);
@@ -2408,12 +2505,12 @@ public final class VectorTile {
           return this;
         }
 
-        private java.util.List<java.lang.Integer> geometry_ = java.util.Collections.emptyList();
+        private com.google.protobuf.Internal.IntList geometry_ = emptyIntList();
         private void ensureGeometryIsMutable() {
-          if (!((bitField0_ & 0x00000008) == 0x00000008)) {
-            geometry_ = new java.util.ArrayList<java.lang.Integer>(geometry_);
-            bitField0_ |= 0x00000008;
+          if (!geometry_.isModifiable()) {
+            geometry_ = makeMutableCopy(geometry_);
           }
+          bitField0_ |= 0x00000008;
         }
         /**
          * <pre>
@@ -2423,10 +2520,12 @@ public final class VectorTile {
          * </pre>
          *
          * <code>repeated uint32 geometry = 4 [packed = true];</code>
+         * @return A list containing the geometry.
          */
         public java.util.List<java.lang.Integer>
-        getGeometryList() {
-          return java.util.Collections.unmodifiableList(geometry_);
+            getGeometryList() {
+          geometry_.makeImmutable();
+          return geometry_;
         }
         /**
          * <pre>
@@ -2436,6 +2535,7 @@ public final class VectorTile {
          * </pre>
          *
          * <code>repeated uint32 geometry = 4 [packed = true];</code>
+         * @return The count of geometry.
          */
         public int getGeometryCount() {
           return geometry_.size();
@@ -2448,9 +2548,11 @@ public final class VectorTile {
          * </pre>
          *
          * <code>repeated uint32 geometry = 4 [packed = true];</code>
+         * @param index The index of the element to return.
+         * @return The geometry at the given index.
          */
         public int getGeometry(int index) {
-          return geometry_.get(index);
+          return geometry_.getInt(index);
         }
         /**
          * <pre>
@@ -2460,11 +2562,16 @@ public final class VectorTile {
          * </pre>
          *
          * <code>repeated uint32 geometry = 4 [packed = true];</code>
+         * @param index The index to set the value at.
+         * @param value The geometry to set.
+         * @return This builder for chaining.
          */
         public Builder setGeometry(
             int index, int value) {
+
           ensureGeometryIsMutable();
-          geometry_.set(index, value);
+          geometry_.setInt(index, value);
+          bitField0_ |= 0x00000008;
           onChanged();
           return this;
         }
@@ -2476,10 +2583,14 @@ public final class VectorTile {
          * </pre>
          *
          * <code>repeated uint32 geometry = 4 [packed = true];</code>
+         * @param value The geometry to add.
+         * @return This builder for chaining.
          */
         public Builder addGeometry(int value) {
+
           ensureGeometryIsMutable();
-          geometry_.add(value);
+          geometry_.addInt(value);
+          bitField0_ |= 0x00000008;
           onChanged();
           return this;
         }
@@ -2491,12 +2602,15 @@ public final class VectorTile {
          * </pre>
          *
          * <code>repeated uint32 geometry = 4 [packed = true];</code>
+         * @param values The geometry to add.
+         * @return This builder for chaining.
          */
         public Builder addAllGeometry(
             java.lang.Iterable<? extends java.lang.Integer> values) {
           ensureGeometryIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
               values, geometry_);
+          bitField0_ |= 0x00000008;
           onChanged();
           return this;
         }
@@ -2508,18 +2622,21 @@ public final class VectorTile {
          * </pre>
          *
          * <code>repeated uint32 geometry = 4 [packed = true];</code>
+         * @return This builder for chaining.
          */
         public Builder clearGeometry() {
-          geometry_ = java.util.Collections.emptyList();
+          geometry_ = emptyIntList();
           bitField0_ = (bitField0_ & ~0x00000008);
           onChanged();
           return this;
         }
+        @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
           return super.setUnknownFields(unknownFields);
         }
 
+        @java.lang.Override
         public final Builder mergeUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
           return super.mergeUnknownFields(unknownFields);
@@ -2530,22 +2647,34 @@ public final class VectorTile {
       }
 
       // @@protoc_insertion_point(class_scope:vector_tile.Tile.Feature)
-      private static final VectorTile.Tile.Feature DEFAULT_INSTANCE;
+      private static final edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature DEFAULT_INSTANCE;
       static {
-        DEFAULT_INSTANCE = new VectorTile.Tile.Feature();
+        DEFAULT_INSTANCE = new edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature();
       }
 
-      public static VectorTile.Tile.Feature getDefaultInstance() {
+      public static edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature getDefaultInstance() {
         return DEFAULT_INSTANCE;
       }
 
       @java.lang.Deprecated public static final com.google.protobuf.Parser<Feature>
           PARSER = new com.google.protobuf.AbstractParser<Feature>() {
+        @java.lang.Override
         public Feature parsePartialFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Feature(input, extensionRegistry);
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
         }
       };
 
@@ -2558,7 +2687,8 @@ public final class VectorTile {
         return PARSER;
       }
 
-      public VectorTile.Tile.Feature getDefaultInstanceForType() {
+      @java.lang.Override
+      public edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
@@ -2578,6 +2708,7 @@ public final class VectorTile {
        * </pre>
        *
        * <code>required uint32 version = 15 [default = 1];</code>
+       * @return Whether the version field is set.
        */
       boolean hasVersion();
       /**
@@ -2589,22 +2720,26 @@ public final class VectorTile {
        * </pre>
        *
        * <code>required uint32 version = 15 [default = 1];</code>
+       * @return The version.
        */
       int getVersion();
 
       /**
        * <code>required string name = 1;</code>
+       * @return Whether the name field is set.
        */
       boolean hasName();
       /**
        * <code>required string name = 1;</code>
+       * @return The name.
        */
       java.lang.String getName();
       /**
        * <code>required string name = 1;</code>
+       * @return The bytes for name.
        */
       com.google.protobuf.ByteString
-      getNameBytes();
+          getNameBytes();
 
       /**
        * <pre>
@@ -2613,8 +2748,8 @@ public final class VectorTile {
        *
        * <code>repeated .vector_tile.Tile.Feature features = 2;</code>
        */
-      java.util.List<VectorTile.Tile.Feature>
-      getFeaturesList();
+      java.util.List<edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature> 
+          getFeaturesList();
       /**
        * <pre>
        * The actual features in this tile.
@@ -2622,7 +2757,7 @@ public final class VectorTile {
        *
        * <code>repeated .vector_tile.Tile.Feature features = 2;</code>
        */
-      VectorTile.Tile.Feature getFeatures(int index);
+      edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature getFeatures(int index);
       /**
        * <pre>
        * The actual features in this tile.
@@ -2638,8 +2773,8 @@ public final class VectorTile {
        *
        * <code>repeated .vector_tile.Tile.Feature features = 2;</code>
        */
-      java.util.List<? extends VectorTile.Tile.FeatureOrBuilder>
-      getFeaturesOrBuilderList();
+      java.util.List<? extends edu.colorado.cires.cmg.mvt.VectorTile.Tile.FeatureOrBuilder> 
+          getFeaturesOrBuilderList();
       /**
        * <pre>
        * The actual features in this tile.
@@ -2647,7 +2782,7 @@ public final class VectorTile {
        *
        * <code>repeated .vector_tile.Tile.Feature features = 2;</code>
        */
-      VectorTile.Tile.FeatureOrBuilder getFeaturesOrBuilder(
+      edu.colorado.cires.cmg.mvt.VectorTile.Tile.FeatureOrBuilder getFeaturesOrBuilder(
           int index);
 
       /**
@@ -2656,15 +2791,17 @@ public final class VectorTile {
        * </pre>
        *
        * <code>repeated string keys = 3;</code>
+       * @return A list containing the keys.
        */
       java.util.List<java.lang.String>
-      getKeysList();
+          getKeysList();
       /**
        * <pre>
        * Dictionary encoding for keys
        * </pre>
        *
        * <code>repeated string keys = 3;</code>
+       * @return The count of keys.
        */
       int getKeysCount();
       /**
@@ -2673,6 +2810,8 @@ public final class VectorTile {
        * </pre>
        *
        * <code>repeated string keys = 3;</code>
+       * @param index The index of the element to return.
+       * @return The keys at the given index.
        */
       java.lang.String getKeys(int index);
       /**
@@ -2681,9 +2820,11 @@ public final class VectorTile {
        * </pre>
        *
        * <code>repeated string keys = 3;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the keys at the given index.
        */
       com.google.protobuf.ByteString
-      getKeysBytes(int index);
+          getKeysBytes(int index);
 
       /**
        * <pre>
@@ -2692,8 +2833,8 @@ public final class VectorTile {
        *
        * <code>repeated .vector_tile.Tile.Value values = 4;</code>
        */
-      java.util.List<VectorTile.Tile.Value>
-      getValuesList();
+      java.util.List<edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value> 
+          getValuesList();
       /**
        * <pre>
        * Dictionary encoding for values
@@ -2701,7 +2842,7 @@ public final class VectorTile {
        *
        * <code>repeated .vector_tile.Tile.Value values = 4;</code>
        */
-      VectorTile.Tile.Value getValues(int index);
+      edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value getValues(int index);
       /**
        * <pre>
        * Dictionary encoding for values
@@ -2717,8 +2858,8 @@ public final class VectorTile {
        *
        * <code>repeated .vector_tile.Tile.Value values = 4;</code>
        */
-      java.util.List<? extends VectorTile.Tile.ValueOrBuilder>
-      getValuesOrBuilderList();
+      java.util.List<? extends edu.colorado.cires.cmg.mvt.VectorTile.Tile.ValueOrBuilder> 
+          getValuesOrBuilderList();
       /**
        * <pre>
        * Dictionary encoding for values
@@ -2726,7 +2867,7 @@ public final class VectorTile {
        *
        * <code>repeated .vector_tile.Tile.Value values = 4;</code>
        */
-      VectorTile.Tile.ValueOrBuilder getValuesOrBuilder(
+      edu.colorado.cires.cmg.mvt.VectorTile.Tile.ValueOrBuilder getValuesOrBuilder(
           int index);
 
       /**
@@ -2736,6 +2877,7 @@ public final class VectorTile {
        * </pre>
        *
        * <code>optional uint32 extent = 5 [default = 4096];</code>
+       * @return Whether the extent field is set.
        */
       boolean hasExtent();
       /**
@@ -2745,6 +2887,7 @@ public final class VectorTile {
        * </pre>
        *
        * <code>optional uint32 extent = 5 [default = 4096];</code>
+       * @return The extent.
        */
       int getExtent();
     }
@@ -2755,135 +2898,49 @@ public final class VectorTile {
      *
      * Protobuf type {@code vector_tile.Tile.Layer}
      */
-    public  static final class Layer extends
+    public static final class Layer extends
         com.google.protobuf.GeneratedMessageV3.ExtendableMessage<
-            Layer> implements
+          Layer> implements
         // @@protoc_insertion_point(message_implements:vector_tile.Tile.Layer)
         LayerOrBuilder {
-      private static final long serialVersionUID = 0L;
+    private static final long serialVersionUID = 0L;
       // Use Layer.newBuilder() to construct.
-      private Layer(com.google.protobuf.GeneratedMessageV3.ExtendableBuilder<VectorTile.Tile.Layer, ?> builder) {
+      private Layer(com.google.protobuf.GeneratedMessageV3.ExtendableBuilder<edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer, ?> builder) {
         super(builder);
       }
       private Layer() {
         version_ = 1;
         name_ = "";
         features_ = java.util.Collections.emptyList();
-        keys_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        keys_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
         values_ = java.util.Collections.emptyList();
         extent_ = 4096;
       }
 
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
-      getUnknownFields() {
-        return this.unknownFields;
-      }
-      private Layer(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        this();
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              default: {
-                if (!parseUnknownField(
-                    input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-              case 10: {
-                com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x00000002;
-                name_ = bs;
-                break;
-              }
-              case 18: {
-                if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-                  features_ = new java.util.ArrayList<VectorTile.Tile.Feature>();
-                  mutable_bitField0_ |= 0x00000004;
-                }
-                features_.add(
-                    input.readMessage(VectorTile.Tile.Feature.PARSER, extensionRegistry));
-                break;
-              }
-              case 26: {
-                com.google.protobuf.ByteString bs = input.readBytes();
-                if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-                  keys_ = new com.google.protobuf.LazyStringArrayList();
-                  mutable_bitField0_ |= 0x00000008;
-                }
-                keys_.add(bs);
-                break;
-              }
-              case 34: {
-                if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
-                  values_ = new java.util.ArrayList<VectorTile.Tile.Value>();
-                  mutable_bitField0_ |= 0x00000010;
-                }
-                values_.add(
-                    input.readMessage(VectorTile.Tile.Value.PARSER, extensionRegistry));
-                break;
-              }
-              case 40: {
-                bitField0_ |= 0x00000004;
-                extent_ = input.readUInt32();
-                break;
-              }
-              case 120: {
-                bitField0_ |= 0x00000001;
-                version_ = input.readUInt32();
-                break;
-              }
-            }
-          }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(this);
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
-              e).setUnfinishedMessage(this);
-        } finally {
-          if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-            features_ = java.util.Collections.unmodifiableList(features_);
-          }
-          if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-            keys_ = keys_.getUnmodifiableView();
-          }
-          if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
-            values_ = java.util.Collections.unmodifiableList(values_);
-          }
-          this.unknownFields = unknownFields.build();
-          makeExtensionsImmutable();
-        }
-      }
-      public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
-        return VectorTile.internal_static_vector_tile_Tile_Layer_descriptor;
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new Layer();
       }
 
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return edu.colorado.cires.cmg.mvt.VectorTile.internal_static_vector_tile_Tile_Layer_descriptor;
+      }
+
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
-        return VectorTile.internal_static_vector_tile_Tile_Layer_fieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return edu.colorado.cires.cmg.mvt.VectorTile.internal_static_vector_tile_Tile_Layer_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                VectorTile.Tile.Layer.class, VectorTile.Tile.Layer.Builder.class);
+                edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer.class, edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer.Builder.class);
       }
 
       private int bitField0_;
       public static final int VERSION_FIELD_NUMBER = 15;
-      private int version_;
+      private int version_ = 1;
       /**
        * <pre>
        * Any compliant implementation must first read the version
@@ -2893,9 +2950,11 @@ public final class VectorTile {
        * </pre>
        *
        * <code>required uint32 version = 15 [default = 1];</code>
+       * @return Whether the version field is set.
        */
+      @java.lang.Override
       public boolean hasVersion() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <pre>
@@ -2906,28 +2965,35 @@ public final class VectorTile {
        * </pre>
        *
        * <code>required uint32 version = 15 [default = 1];</code>
+       * @return The version.
        */
+      @java.lang.Override
       public int getVersion() {
         return version_;
       }
 
       public static final int NAME_FIELD_NUMBER = 1;
-      private volatile java.lang.Object name_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object name_ = "";
       /**
        * <code>required string name = 1;</code>
+       * @return Whether the name field is set.
        */
+      @java.lang.Override
       public boolean hasName() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <code>required string name = 1;</code>
+       * @return The name.
        */
+      @java.lang.Override
       public java.lang.String getName() {
         java.lang.Object ref = name_;
         if (ref instanceof java.lang.String) {
           return (java.lang.String) ref;
         } else {
-          com.google.protobuf.ByteString bs =
+          com.google.protobuf.ByteString bs = 
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
@@ -2938,12 +3004,14 @@ public final class VectorTile {
       }
       /**
        * <code>required string name = 1;</code>
+       * @return The bytes for name.
        */
+      @java.lang.Override
       public com.google.protobuf.ByteString
-      getNameBytes() {
+          getNameBytes() {
         java.lang.Object ref = name_;
         if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           name_ = b;
@@ -2954,7 +3022,8 @@ public final class VectorTile {
       }
 
       public static final int FEATURES_FIELD_NUMBER = 2;
-      private java.util.List<VectorTile.Tile.Feature> features_;
+      @SuppressWarnings("serial")
+      private java.util.List<edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature> features_;
       /**
        * <pre>
        * The actual features in this tile.
@@ -2962,7 +3031,8 @@ public final class VectorTile {
        *
        * <code>repeated .vector_tile.Tile.Feature features = 2;</code>
        */
-      public java.util.List<VectorTile.Tile.Feature> getFeaturesList() {
+      @java.lang.Override
+      public java.util.List<edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature> getFeaturesList() {
         return features_;
       }
       /**
@@ -2972,8 +3042,9 @@ public final class VectorTile {
        *
        * <code>repeated .vector_tile.Tile.Feature features = 2;</code>
        */
-      public java.util.List<? extends VectorTile.Tile.FeatureOrBuilder>
-      getFeaturesOrBuilderList() {
+      @java.lang.Override
+      public java.util.List<? extends edu.colorado.cires.cmg.mvt.VectorTile.Tile.FeatureOrBuilder> 
+          getFeaturesOrBuilderList() {
         return features_;
       }
       /**
@@ -2983,6 +3054,7 @@ public final class VectorTile {
        *
        * <code>repeated .vector_tile.Tile.Feature features = 2;</code>
        */
+      @java.lang.Override
       public int getFeaturesCount() {
         return features_.size();
       }
@@ -2993,7 +3065,8 @@ public final class VectorTile {
        *
        * <code>repeated .vector_tile.Tile.Feature features = 2;</code>
        */
-      public VectorTile.Tile.Feature getFeatures(int index) {
+      @java.lang.Override
+      public edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature getFeatures(int index) {
         return features_.get(index);
       }
       /**
@@ -3003,22 +3076,26 @@ public final class VectorTile {
        *
        * <code>repeated .vector_tile.Tile.Feature features = 2;</code>
        */
-      public VectorTile.Tile.FeatureOrBuilder getFeaturesOrBuilder(
+      @java.lang.Override
+      public edu.colorado.cires.cmg.mvt.VectorTile.Tile.FeatureOrBuilder getFeaturesOrBuilder(
           int index) {
         return features_.get(index);
       }
 
       public static final int KEYS_FIELD_NUMBER = 3;
-      private com.google.protobuf.LazyStringList keys_;
+      @SuppressWarnings("serial")
+      private com.google.protobuf.LazyStringArrayList keys_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       /**
        * <pre>
        * Dictionary encoding for keys
        * </pre>
        *
        * <code>repeated string keys = 3;</code>
+       * @return A list containing the keys.
        */
       public com.google.protobuf.ProtocolStringList
-      getKeysList() {
+          getKeysList() {
         return keys_;
       }
       /**
@@ -3027,6 +3104,7 @@ public final class VectorTile {
        * </pre>
        *
        * <code>repeated string keys = 3;</code>
+       * @return The count of keys.
        */
       public int getKeysCount() {
         return keys_.size();
@@ -3037,6 +3115,8 @@ public final class VectorTile {
        * </pre>
        *
        * <code>repeated string keys = 3;</code>
+       * @param index The index of the element to return.
+       * @return The keys at the given index.
        */
       public java.lang.String getKeys(int index) {
         return keys_.get(index);
@@ -3047,14 +3127,17 @@ public final class VectorTile {
        * </pre>
        *
        * <code>repeated string keys = 3;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the keys at the given index.
        */
       public com.google.protobuf.ByteString
-      getKeysBytes(int index) {
+          getKeysBytes(int index) {
         return keys_.getByteString(index);
       }
 
       public static final int VALUES_FIELD_NUMBER = 4;
-      private java.util.List<VectorTile.Tile.Value> values_;
+      @SuppressWarnings("serial")
+      private java.util.List<edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value> values_;
       /**
        * <pre>
        * Dictionary encoding for values
@@ -3062,7 +3145,8 @@ public final class VectorTile {
        *
        * <code>repeated .vector_tile.Tile.Value values = 4;</code>
        */
-      public java.util.List<VectorTile.Tile.Value> getValuesList() {
+      @java.lang.Override
+      public java.util.List<edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value> getValuesList() {
         return values_;
       }
       /**
@@ -3072,8 +3156,9 @@ public final class VectorTile {
        *
        * <code>repeated .vector_tile.Tile.Value values = 4;</code>
        */
-      public java.util.List<? extends VectorTile.Tile.ValueOrBuilder>
-      getValuesOrBuilderList() {
+      @java.lang.Override
+      public java.util.List<? extends edu.colorado.cires.cmg.mvt.VectorTile.Tile.ValueOrBuilder> 
+          getValuesOrBuilderList() {
         return values_;
       }
       /**
@@ -3083,6 +3168,7 @@ public final class VectorTile {
        *
        * <code>repeated .vector_tile.Tile.Value values = 4;</code>
        */
+      @java.lang.Override
       public int getValuesCount() {
         return values_.size();
       }
@@ -3093,7 +3179,8 @@ public final class VectorTile {
        *
        * <code>repeated .vector_tile.Tile.Value values = 4;</code>
        */
-      public VectorTile.Tile.Value getValues(int index) {
+      @java.lang.Override
+      public edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value getValues(int index) {
         return values_.get(index);
       }
       /**
@@ -3103,13 +3190,14 @@ public final class VectorTile {
        *
        * <code>repeated .vector_tile.Tile.Value values = 4;</code>
        */
-      public VectorTile.Tile.ValueOrBuilder getValuesOrBuilder(
+      @java.lang.Override
+      public edu.colorado.cires.cmg.mvt.VectorTile.Tile.ValueOrBuilder getValuesOrBuilder(
           int index) {
         return values_.get(index);
       }
 
       public static final int EXTENT_FIELD_NUMBER = 5;
-      private int extent_;
+      private int extent_ = 4096;
       /**
        * <pre>
        * Although this is an "optional" field it is required by the specification.
@@ -3117,9 +3205,11 @@ public final class VectorTile {
        * </pre>
        *
        * <code>optional uint32 extent = 5 [default = 4096];</code>
+       * @return Whether the extent field is set.
        */
+      @java.lang.Override
       public boolean hasExtent() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <pre>
@@ -3128,12 +3218,15 @@ public final class VectorTile {
        * </pre>
        *
        * <code>optional uint32 extent = 5 [default = 4096];</code>
+       * @return The extent.
        */
+      @java.lang.Override
       public int getExtent() {
         return extent_;
       }
 
       private byte memoizedIsInitialized = -1;
+      @java.lang.Override
       public final boolean isInitialized() {
         byte isInitialized = memoizedIsInitialized;
         if (isInitialized == 1) return true;
@@ -3161,12 +3254,13 @@ public final class VectorTile {
         return true;
       }
 
+      @java.lang.Override
       public void writeTo(com.google.protobuf.CodedOutputStream output)
-          throws java.io.IOException {
+                          throws java.io.IOException {
         com.google.protobuf.GeneratedMessageV3
-            .ExtendableMessage<VectorTile.Tile.Layer>.ExtensionWriter
+          .ExtendableMessage<edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer>.ExtensionWriter
             extensionWriter = newExtensionWriter();
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
         }
         for (int i = 0; i < features_.size(); i++) {
@@ -3178,27 +3272,28 @@ public final class VectorTile {
         for (int i = 0; i < values_.size(); i++) {
           output.writeMessage(4, values_.get(i));
         }
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           output.writeUInt32(5, extent_);
         }
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           output.writeUInt32(15, version_);
         }
         extensionWriter.writeUntil(536870912, output);
-        unknownFields.writeTo(output);
+        getUnknownFields().writeTo(output);
       }
 
+      @java.lang.Override
       public int getSerializedSize() {
         int size = memoizedSize;
         if (size != -1) return size;
 
         size = 0;
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
         }
         for (int i = 0; i < features_.size(); i++) {
           size += com.google.protobuf.CodedOutputStream
-              .computeMessageSize(2, features_.get(i));
+            .computeMessageSize(2, features_.get(i));
         }
         {
           int dataSize = 0;
@@ -3210,18 +3305,18 @@ public final class VectorTile {
         }
         for (int i = 0; i < values_.size(); i++) {
           size += com.google.protobuf.CodedOutputStream
-              .computeMessageSize(4, values_.get(i));
+            .computeMessageSize(4, values_.get(i));
         }
-        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           size += com.google.protobuf.CodedOutputStream
-              .computeUInt32Size(5, extent_);
+            .computeUInt32Size(5, extent_);
         }
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           size += com.google.protobuf.CodedOutputStream
-              .computeUInt32Size(15, version_);
+            .computeUInt32Size(15, version_);
         }
         size += extensionsSerializedSize();
-        size += unknownFields.getSerializedSize();
+        size += getUnknownFields().getSerializedSize();
         memoizedSize = size;
         return size;
       }
@@ -3229,39 +3324,38 @@ public final class VectorTile {
       @java.lang.Override
       public boolean equals(final java.lang.Object obj) {
         if (obj == this) {
-          return true;
+         return true;
         }
-        if (!(obj instanceof VectorTile.Tile.Layer)) {
+        if (!(obj instanceof edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer)) {
           return super.equals(obj);
         }
-        VectorTile.Tile.Layer other = (VectorTile.Tile.Layer) obj;
+        edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer other = (edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer) obj;
 
-        boolean result = true;
-        result = result && (hasVersion() == other.hasVersion());
+        if (hasVersion() != other.hasVersion()) return false;
         if (hasVersion()) {
-          result = result && (getVersion()
-              == other.getVersion());
+          if (getVersion()
+              != other.getVersion()) return false;
         }
-        result = result && (hasName() == other.hasName());
+        if (hasName() != other.hasName()) return false;
         if (hasName()) {
-          result = result && getName()
-              .equals(other.getName());
+          if (!getName()
+              .equals(other.getName())) return false;
         }
-        result = result && getFeaturesList()
-            .equals(other.getFeaturesList());
-        result = result && getKeysList()
-            .equals(other.getKeysList());
-        result = result && getValuesList()
-            .equals(other.getValuesList());
-        result = result && (hasExtent() == other.hasExtent());
+        if (!getFeaturesList()
+            .equals(other.getFeaturesList())) return false;
+        if (!getKeysList()
+            .equals(other.getKeysList())) return false;
+        if (!getValuesList()
+            .equals(other.getValuesList())) return false;
+        if (hasExtent() != other.hasExtent()) return false;
         if (hasExtent()) {
-          result = result && (getExtent()
-              == other.getExtent());
+          if (getExtent()
+              != other.getExtent()) return false;
         }
-        result = result && unknownFields.equals(other.unknownFields);
-        result = result &&
-            getExtensionFields().equals(other.getExtensionFields());
-        return result;
+        if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+        if (!getExtensionFields().equals(other.getExtensionFields()))
+          return false;
+        return true;
       }
 
       @java.lang.Override
@@ -3296,74 +3390,76 @@ public final class VectorTile {
           hash = (53 * hash) + getExtent();
         }
         hash = hashFields(hash, getExtensionFields());
-        hash = (29 * hash) + unknownFields.hashCode();
+        hash = (29 * hash) + getUnknownFields().hashCode();
         memoizedHashCode = hash;
         return hash;
       }
 
-      public static VectorTile.Tile.Layer parseFrom(
+      public static edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer parseFrom(
           java.nio.ByteBuffer data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static VectorTile.Tile.Layer parseFrom(
+      public static edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer parseFrom(
           java.nio.ByteBuffer data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static VectorTile.Tile.Layer parseFrom(
+      public static edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static VectorTile.Tile.Layer parseFrom(
+      public static edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static VectorTile.Tile.Layer parseFrom(byte[] data)
+      public static edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static VectorTile.Tile.Layer parseFrom(
+      public static edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static VectorTile.Tile.Layer parseFrom(java.io.InputStream input)
+      public static edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static VectorTile.Tile.Layer parseFrom(
+      public static edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
-      public static VectorTile.Tile.Layer parseDelimitedFrom(java.io.InputStream input)
+
+      public static edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input);
       }
-      public static VectorTile.Tile.Layer parseDelimitedFrom(
+
+      public static edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
-      public static VectorTile.Tile.Layer parseFrom(
+      public static edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static VectorTile.Tile.Layer parseFrom(
+      public static edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -3371,13 +3467,15 @@ public final class VectorTile {
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
 
+      @java.lang.Override
       public Builder newBuilderForType() { return newBuilder(); }
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
       }
-      public static Builder newBuilder(VectorTile.Tile.Layer prototype) {
+      public static Builder newBuilder(edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
+      @java.lang.Override
       public Builder toBuilder() {
         return this == DEFAULT_INSTANCE
             ? new Builder() : new Builder().mergeFrom(this);
@@ -3398,94 +3496,90 @@ public final class VectorTile {
        */
       public static final class Builder extends
           com.google.protobuf.GeneratedMessageV3.ExtendableBuilder<
-              VectorTile.Tile.Layer, Builder> implements
+            edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer, Builder> implements
           // @@protoc_insertion_point(builder_implements:vector_tile.Tile.Layer)
-          VectorTile.Tile.LayerOrBuilder {
+          edu.colorado.cires.cmg.mvt.VectorTile.Tile.LayerOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-          return VectorTile.internal_static_vector_tile_Tile_Layer_descriptor;
+            getDescriptor() {
+          return edu.colorado.cires.cmg.mvt.VectorTile.internal_static_vector_tile_Tile_Layer_descriptor;
         }
 
+        @java.lang.Override
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-          return VectorTile.internal_static_vector_tile_Tile_Layer_fieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return edu.colorado.cires.cmg.mvt.VectorTile.internal_static_vector_tile_Tile_Layer_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  VectorTile.Tile.Layer.class, VectorTile.Tile.Layer.Builder.class);
+                  edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer.class, edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer.Builder.class);
         }
 
         // Construct using edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer.newBuilder()
         private Builder() {
-          maybeForceBuilderInitialization();
+
         }
 
         private Builder(
             com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
           super(parent);
-          maybeForceBuilderInitialization();
+
         }
-        private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessageV3
-              .alwaysUseFieldBuilders) {
-            getFeaturesFieldBuilder();
-            getValuesFieldBuilder();
-          }
-        }
+        @java.lang.Override
         public Builder clear() {
           super.clear();
+          bitField0_ = 0;
           version_ = 1;
-          bitField0_ = (bitField0_ & ~0x00000001);
           name_ = "";
-          bitField0_ = (bitField0_ & ~0x00000002);
           if (featuresBuilder_ == null) {
             features_ = java.util.Collections.emptyList();
-            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
+            features_ = null;
             featuresBuilder_.clear();
           }
-          keys_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000004);
+          keys_ =
+              com.google.protobuf.LazyStringArrayList.emptyList();
           if (valuesBuilder_ == null) {
             values_ = java.util.Collections.emptyList();
-            bitField0_ = (bitField0_ & ~0x00000010);
           } else {
+            values_ = null;
             valuesBuilder_.clear();
           }
+          bitField0_ = (bitField0_ & ~0x00000010);
           extent_ = 4096;
-          bitField0_ = (bitField0_ & ~0x00000020);
           return this;
         }
 
+        @java.lang.Override
         public com.google.protobuf.Descriptors.Descriptor
-        getDescriptorForType() {
-          return VectorTile.internal_static_vector_tile_Tile_Layer_descriptor;
+            getDescriptorForType() {
+          return edu.colorado.cires.cmg.mvt.VectorTile.internal_static_vector_tile_Tile_Layer_descriptor;
         }
 
-        public VectorTile.Tile.Layer getDefaultInstanceForType() {
-          return VectorTile.Tile.Layer.getDefaultInstance();
+        @java.lang.Override
+        public edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer getDefaultInstanceForType() {
+          return edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer.getDefaultInstance();
         }
 
-        public VectorTile.Tile.Layer build() {
-          VectorTile.Tile.Layer result = buildPartial();
+        @java.lang.Override
+        public edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer build() {
+          edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
           return result;
         }
 
-        public VectorTile.Tile.Layer buildPartial() {
-          VectorTile.Tile.Layer result = new VectorTile.Tile.Layer(this);
-          int from_bitField0_ = bitField0_;
-          int to_bitField0_ = 0;
-          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-            to_bitField0_ |= 0x00000001;
-          }
-          result.version_ = version_;
-          if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-            to_bitField0_ |= 0x00000002;
-          }
-          result.name_ = name_;
+        @java.lang.Override
+        public edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer buildPartial() {
+          edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer result = new edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer(this);
+          buildPartialRepeatedFields(result);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartialRepeatedFields(edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer result) {
           if (featuresBuilder_ == null) {
-            if (((bitField0_ & 0x00000004) == 0x00000004)) {
+            if (((bitField0_ & 0x00000004) != 0)) {
               features_ = java.util.Collections.unmodifiableList(features_);
               bitField0_ = (bitField0_ & ~0x00000004);
             }
@@ -3493,13 +3587,8 @@ public final class VectorTile {
           } else {
             result.features_ = featuresBuilder_.build();
           }
-          if (((bitField0_ & 0x00000008) == 0x00000008)) {
-            keys_ = keys_.getUnmodifiableView();
-            bitField0_ = (bitField0_ & ~0x00000008);
-          }
-          result.keys_ = keys_;
           if (valuesBuilder_ == null) {
-            if (((bitField0_ & 0x00000010) == 0x00000010)) {
+            if (((bitField0_ & 0x00000010) != 0)) {
               values_ = java.util.Collections.unmodifiableList(values_);
               bitField0_ = (bitField0_ & ~0x00000010);
             }
@@ -3507,81 +3596,107 @@ public final class VectorTile {
           } else {
             result.values_ = valuesBuilder_.build();
           }
-          if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
-            to_bitField0_ |= 0x00000004;
-          }
-          result.extent_ = extent_;
-          result.bitField0_ = to_bitField0_;
-          onBuilt();
-          return result;
         }
 
-        public Builder clone() {
-          return (Builder) super.clone();
+        private void buildPartial0(edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer result) {
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.version_ = version_;
+            to_bitField0_ |= 0x00000001;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.name_ = name_;
+            to_bitField0_ |= 0x00000002;
+          }
+          if (((from_bitField0_ & 0x00000008) != 0)) {
+            keys_.makeImmutable();
+            result.keys_ = keys_;
+          }
+          if (((from_bitField0_ & 0x00000020) != 0)) {
+            result.extent_ = extent_;
+            to_bitField0_ |= 0x00000004;
+          }
+          result.bitField0_ |= to_bitField0_;
         }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
         public Builder setField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.setField(field, value);
+          return super.setField(field, value);
         }
+        @java.lang.Override
         public Builder clearField(
             com.google.protobuf.Descriptors.FieldDescriptor field) {
-          return (Builder) super.clearField(field);
+          return super.clearField(field);
         }
+        @java.lang.Override
         public Builder clearOneof(
             com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-          return (Builder) super.clearOneof(oneof);
+          return super.clearOneof(oneof);
         }
+        @java.lang.Override
         public Builder setRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             int index, java.lang.Object value) {
-          return (Builder) super.setRepeatedField(field, index, value);
+          return super.setRepeatedField(field, index, value);
         }
+        @java.lang.Override
         public Builder addRepeatedField(
             com.google.protobuf.Descriptors.FieldDescriptor field,
             java.lang.Object value) {
-          return (Builder) super.addRepeatedField(field, value);
+          return super.addRepeatedField(field, value);
         }
+        @java.lang.Override
         public <Type> Builder setExtension(
             com.google.protobuf.GeneratedMessage.GeneratedExtension<
-                VectorTile.Tile.Layer, Type> extension,
+                edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer, Type> extension,
             Type value) {
-          return (Builder) super.setExtension(extension, value);
+          return super.setExtension(extension, value);
         }
+        @java.lang.Override
         public <Type> Builder setExtension(
             com.google.protobuf.GeneratedMessage.GeneratedExtension<
-                VectorTile.Tile.Layer, java.util.List<Type>> extension,
+                edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer, java.util.List<Type>> extension,
             int index, Type value) {
-          return (Builder) super.setExtension(extension, index, value);
+          return super.setExtension(extension, index, value);
         }
+        @java.lang.Override
         public <Type> Builder addExtension(
             com.google.protobuf.GeneratedMessage.GeneratedExtension<
-                VectorTile.Tile.Layer, java.util.List<Type>> extension,
+                edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer, java.util.List<Type>> extension,
             Type value) {
-          return (Builder) super.addExtension(extension, value);
+          return super.addExtension(extension, value);
         }
-        public <Type> Builder clearExtension(
+        @java.lang.Override
+        public <T> Builder clearExtension(
             com.google.protobuf.GeneratedMessage.GeneratedExtension<
-                VectorTile.Tile.Layer, ?> extension) {
-          return (Builder) super.clearExtension(extension);
+                edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer, T> extension) {
+          return super.clearExtension(extension);
         }
+        @java.lang.Override
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof VectorTile.Tile.Layer) {
-            return mergeFrom((VectorTile.Tile.Layer)other);
+          if (other instanceof edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer) {
+            return mergeFrom((edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(VectorTile.Tile.Layer other) {
-          if (other == VectorTile.Tile.Layer.getDefaultInstance()) return this;
+        public Builder mergeFrom(edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer other) {
+          if (other == edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer.getDefaultInstance()) return this;
           if (other.hasVersion()) {
             setVersion(other.getVersion());
           }
           if (other.hasName()) {
-            bitField0_ |= 0x00000002;
             name_ = other.name_;
+            bitField0_ |= 0x00000002;
             onChanged();
           }
           if (featuresBuilder_ == null) {
@@ -3602,9 +3717,9 @@ public final class VectorTile {
                 featuresBuilder_ = null;
                 features_ = other.features_;
                 bitField0_ = (bitField0_ & ~0x00000004);
-                featuresBuilder_ =
-                    com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                        getFeaturesFieldBuilder() : null;
+                featuresBuilder_ = 
+                  com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                     getFeaturesFieldBuilder() : null;
               } else {
                 featuresBuilder_.addAllMessages(other.features_);
               }
@@ -3613,7 +3728,7 @@ public final class VectorTile {
           if (!other.keys_.isEmpty()) {
             if (keys_.isEmpty()) {
               keys_ = other.keys_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ |= 0x00000008;
             } else {
               ensureKeysIsMutable();
               keys_.addAll(other.keys_);
@@ -3638,9 +3753,9 @@ public final class VectorTile {
                 valuesBuilder_ = null;
                 values_ = other.values_;
                 bitField0_ = (bitField0_ & ~0x00000010);
-                valuesBuilder_ =
-                    com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                        getValuesFieldBuilder() : null;
+                valuesBuilder_ = 
+                  com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                     getValuesFieldBuilder() : null;
               } else {
                 valuesBuilder_.addAllMessages(other.values_);
               }
@@ -3650,11 +3765,12 @@ public final class VectorTile {
             setExtent(other.getExtent());
           }
           this.mergeExtensionFields(other);
-          this.mergeUnknownFields(other.unknownFields);
+          this.mergeUnknownFields(other.getUnknownFields());
           onChanged();
           return this;
         }
 
+        @java.lang.Override
         public final boolean isInitialized() {
           if (!hasVersion()) {
             return false;
@@ -3673,21 +3789,82 @@ public final class VectorTile {
           return true;
         }
 
+        @java.lang.Override
         public Builder mergeFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          VectorTile.Tile.Layer parsedMessage = null;
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
           try {
-            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 10: {
+                  name_ = input.readBytes();
+                  bitField0_ |= 0x00000002;
+                  break;
+                } // case 10
+                case 18: {
+                  edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature m =
+                      input.readMessage(
+                          edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature.PARSER,
+                          extensionRegistry);
+                  if (featuresBuilder_ == null) {
+                    ensureFeaturesIsMutable();
+                    features_.add(m);
+                  } else {
+                    featuresBuilder_.addMessage(m);
+                  }
+                  break;
+                } // case 18
+                case 26: {
+                  com.google.protobuf.ByteString bs = input.readBytes();
+                  ensureKeysIsMutable();
+                  keys_.add(bs);
+                  break;
+                } // case 26
+                case 34: {
+                  edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value m =
+                      input.readMessage(
+                          edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value.PARSER,
+                          extensionRegistry);
+                  if (valuesBuilder_ == null) {
+                    ensureValuesIsMutable();
+                    values_.add(m);
+                  } else {
+                    valuesBuilder_.addMessage(m);
+                  }
+                  break;
+                } // case 34
+                case 40: {
+                  extent_ = input.readUInt32();
+                  bitField0_ |= 0x00000020;
+                  break;
+                } // case 40
+                case 120: {
+                  version_ = input.readUInt32();
+                  bitField0_ |= 0x00000001;
+                  break;
+                } // case 120
+                default: {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+              } // switch (tag)
+            } // while (!done)
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (VectorTile.Tile.Layer) e.getUnfinishedMessage();
             throw e.unwrapIOException();
           } finally {
-            if (parsedMessage != null) {
-              mergeFrom(parsedMessage);
-            }
-          }
+            onChanged();
+          } // finally
           return this;
         }
         private int bitField0_;
@@ -3702,9 +3879,11 @@ public final class VectorTile {
          * </pre>
          *
          * <code>required uint32 version = 15 [default = 1];</code>
+         * @return Whether the version field is set.
          */
+        @java.lang.Override
         public boolean hasVersion() {
-          return ((bitField0_ & 0x00000001) == 0x00000001);
+          return ((bitField0_ & 0x00000001) != 0);
         }
         /**
          * <pre>
@@ -3715,7 +3894,9 @@ public final class VectorTile {
          * </pre>
          *
          * <code>required uint32 version = 15 [default = 1];</code>
+         * @return The version.
          */
+        @java.lang.Override
         public int getVersion() {
           return version_;
         }
@@ -3728,10 +3909,13 @@ public final class VectorTile {
          * </pre>
          *
          * <code>required uint32 version = 15 [default = 1];</code>
+         * @param value The version to set.
+         * @return This builder for chaining.
          */
         public Builder setVersion(int value) {
-          bitField0_ |= 0x00000001;
+
           version_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -3744,6 +3928,7 @@ public final class VectorTile {
          * </pre>
          *
          * <code>required uint32 version = 15 [default = 1];</code>
+         * @return This builder for chaining.
          */
         public Builder clearVersion() {
           bitField0_ = (bitField0_ & ~0x00000001);
@@ -3755,12 +3940,14 @@ public final class VectorTile {
         private java.lang.Object name_ = "";
         /**
          * <code>required string name = 1;</code>
+         * @return Whether the name field is set.
          */
         public boolean hasName() {
-          return ((bitField0_ & 0x00000002) == 0x00000002);
+          return ((bitField0_ & 0x00000002) != 0);
         }
         /**
          * <code>required string name = 1;</code>
+         * @return The name.
          */
         public java.lang.String getName() {
           java.lang.Object ref = name_;
@@ -3778,12 +3965,13 @@ public final class VectorTile {
         }
         /**
          * <code>required string name = 1;</code>
+         * @return The bytes for name.
          */
         public com.google.protobuf.ByteString
-        getNameBytes() {
+            getNameBytes() {
           java.lang.Object ref = name_;
           if (ref instanceof String) {
-            com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString b = 
                 com.google.protobuf.ByteString.copyFromUtf8(
                     (java.lang.String) ref);
             name_ = b;
@@ -3794,51 +3982,52 @@ public final class VectorTile {
         }
         /**
          * <code>required string name = 1;</code>
+         * @param value The name to set.
+         * @return This builder for chaining.
          */
         public Builder setName(
             java.lang.String value) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          bitField0_ |= 0x00000002;
+          if (value == null) { throw new NullPointerException(); }
           name_ = value;
+          bitField0_ |= 0x00000002;
           onChanged();
           return this;
         }
         /**
          * <code>required string name = 1;</code>
+         * @return This builder for chaining.
          */
         public Builder clearName() {
-          bitField0_ = (bitField0_ & ~0x00000002);
           name_ = getDefaultInstance().getName();
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
           return this;
         }
         /**
          * <code>required string name = 1;</code>
+         * @param value The bytes for name to set.
+         * @return This builder for chaining.
          */
         public Builder setNameBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          bitField0_ |= 0x00000002;
+          if (value == null) { throw new NullPointerException(); }
           name_ = value;
+          bitField0_ |= 0x00000002;
           onChanged();
           return this;
         }
 
-        private java.util.List<VectorTile.Tile.Feature> features_ =
-            java.util.Collections.emptyList();
+        private java.util.List<edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature> features_ =
+          java.util.Collections.emptyList();
         private void ensureFeaturesIsMutable() {
-          if (!((bitField0_ & 0x00000004) == 0x00000004)) {
-            features_ = new java.util.ArrayList<VectorTile.Tile.Feature>(features_);
+          if (!((bitField0_ & 0x00000004) != 0)) {
+            features_ = new java.util.ArrayList<edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature>(features_);
             bitField0_ |= 0x00000004;
-          }
+           }
         }
 
         private com.google.protobuf.RepeatedFieldBuilderV3<
-            VectorTile.Tile.Feature, VectorTile.Tile.Feature.Builder, VectorTile.Tile.FeatureOrBuilder> featuresBuilder_;
+            edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature, edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature.Builder, edu.colorado.cires.cmg.mvt.VectorTile.Tile.FeatureOrBuilder> featuresBuilder_;
 
         /**
          * <pre>
@@ -3847,7 +4036,7 @@ public final class VectorTile {
          *
          * <code>repeated .vector_tile.Tile.Feature features = 2;</code>
          */
-        public java.util.List<VectorTile.Tile.Feature> getFeaturesList() {
+        public java.util.List<edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature> getFeaturesList() {
           if (featuresBuilder_ == null) {
             return java.util.Collections.unmodifiableList(features_);
           } else {
@@ -3875,7 +4064,7 @@ public final class VectorTile {
          *
          * <code>repeated .vector_tile.Tile.Feature features = 2;</code>
          */
-        public VectorTile.Tile.Feature getFeatures(int index) {
+        public edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature getFeatures(int index) {
           if (featuresBuilder_ == null) {
             return features_.get(index);
           } else {
@@ -3890,7 +4079,7 @@ public final class VectorTile {
          * <code>repeated .vector_tile.Tile.Feature features = 2;</code>
          */
         public Builder setFeatures(
-            int index, VectorTile.Tile.Feature value) {
+            int index, edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature value) {
           if (featuresBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -3911,7 +4100,7 @@ public final class VectorTile {
          * <code>repeated .vector_tile.Tile.Feature features = 2;</code>
          */
         public Builder setFeatures(
-            int index, VectorTile.Tile.Feature.Builder builderForValue) {
+            int index, edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature.Builder builderForValue) {
           if (featuresBuilder_ == null) {
             ensureFeaturesIsMutable();
             features_.set(index, builderForValue.build());
@@ -3928,7 +4117,7 @@ public final class VectorTile {
          *
          * <code>repeated .vector_tile.Tile.Feature features = 2;</code>
          */
-        public Builder addFeatures(VectorTile.Tile.Feature value) {
+        public Builder addFeatures(edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature value) {
           if (featuresBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -3949,7 +4138,7 @@ public final class VectorTile {
          * <code>repeated .vector_tile.Tile.Feature features = 2;</code>
          */
         public Builder addFeatures(
-            int index, VectorTile.Tile.Feature value) {
+            int index, edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature value) {
           if (featuresBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -3970,7 +4159,7 @@ public final class VectorTile {
          * <code>repeated .vector_tile.Tile.Feature features = 2;</code>
          */
         public Builder addFeatures(
-            VectorTile.Tile.Feature.Builder builderForValue) {
+            edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature.Builder builderForValue) {
           if (featuresBuilder_ == null) {
             ensureFeaturesIsMutable();
             features_.add(builderForValue.build());
@@ -3988,7 +4177,7 @@ public final class VectorTile {
          * <code>repeated .vector_tile.Tile.Feature features = 2;</code>
          */
         public Builder addFeatures(
-            int index, VectorTile.Tile.Feature.Builder builderForValue) {
+            int index, edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature.Builder builderForValue) {
           if (featuresBuilder_ == null) {
             ensureFeaturesIsMutable();
             features_.add(index, builderForValue.build());
@@ -4006,7 +4195,7 @@ public final class VectorTile {
          * <code>repeated .vector_tile.Tile.Feature features = 2;</code>
          */
         public Builder addAllFeatures(
-            java.lang.Iterable<? extends VectorTile.Tile.Feature> values) {
+            java.lang.Iterable<? extends edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature> values) {
           if (featuresBuilder_ == null) {
             ensureFeaturesIsMutable();
             com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -4058,7 +4247,7 @@ public final class VectorTile {
          *
          * <code>repeated .vector_tile.Tile.Feature features = 2;</code>
          */
-        public VectorTile.Tile.Feature.Builder getFeaturesBuilder(
+        public edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature.Builder getFeaturesBuilder(
             int index) {
           return getFeaturesFieldBuilder().getBuilder(index);
         }
@@ -4069,7 +4258,7 @@ public final class VectorTile {
          *
          * <code>repeated .vector_tile.Tile.Feature features = 2;</code>
          */
-        public VectorTile.Tile.FeatureOrBuilder getFeaturesOrBuilder(
+        public edu.colorado.cires.cmg.mvt.VectorTile.Tile.FeatureOrBuilder getFeaturesOrBuilder(
             int index) {
           if (featuresBuilder_ == null) {
             return features_.get(index);  } else {
@@ -4083,8 +4272,8 @@ public final class VectorTile {
          *
          * <code>repeated .vector_tile.Tile.Feature features = 2;</code>
          */
-        public java.util.List<? extends VectorTile.Tile.FeatureOrBuilder>
-        getFeaturesOrBuilderList() {
+        public java.util.List<? extends edu.colorado.cires.cmg.mvt.VectorTile.Tile.FeatureOrBuilder> 
+             getFeaturesOrBuilderList() {
           if (featuresBuilder_ != null) {
             return featuresBuilder_.getMessageOrBuilderList();
           } else {
@@ -4098,9 +4287,9 @@ public final class VectorTile {
          *
          * <code>repeated .vector_tile.Tile.Feature features = 2;</code>
          */
-        public VectorTile.Tile.Feature.Builder addFeaturesBuilder() {
+        public edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature.Builder addFeaturesBuilder() {
           return getFeaturesFieldBuilder().addBuilder(
-              VectorTile.Tile.Feature.getDefaultInstance());
+              edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature.getDefaultInstance());
         }
         /**
          * <pre>
@@ -4109,10 +4298,10 @@ public final class VectorTile {
          *
          * <code>repeated .vector_tile.Tile.Feature features = 2;</code>
          */
-        public VectorTile.Tile.Feature.Builder addFeaturesBuilder(
+        public edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature.Builder addFeaturesBuilder(
             int index) {
           return getFeaturesFieldBuilder().addBuilder(
-              index, VectorTile.Tile.Feature.getDefaultInstance());
+              index, edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature.getDefaultInstance());
         }
         /**
          * <pre>
@@ -4121,31 +4310,32 @@ public final class VectorTile {
          *
          * <code>repeated .vector_tile.Tile.Feature features = 2;</code>
          */
-        public java.util.List<VectorTile.Tile.Feature.Builder>
-        getFeaturesBuilderList() {
+        public java.util.List<edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature.Builder> 
+             getFeaturesBuilderList() {
           return getFeaturesFieldBuilder().getBuilderList();
         }
         private com.google.protobuf.RepeatedFieldBuilderV3<
-            VectorTile.Tile.Feature, VectorTile.Tile.Feature.Builder, VectorTile.Tile.FeatureOrBuilder>
-        getFeaturesFieldBuilder() {
+            edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature, edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature.Builder, edu.colorado.cires.cmg.mvt.VectorTile.Tile.FeatureOrBuilder> 
+            getFeaturesFieldBuilder() {
           if (featuresBuilder_ == null) {
             featuresBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-                VectorTile.Tile.Feature, VectorTile.Tile.Feature.Builder, VectorTile.Tile.FeatureOrBuilder>(
-                features_,
-                ((bitField0_ & 0x00000004) == 0x00000004),
-                getParentForChildren(),
-                isClean());
+                edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature, edu.colorado.cires.cmg.mvt.VectorTile.Tile.Feature.Builder, edu.colorado.cires.cmg.mvt.VectorTile.Tile.FeatureOrBuilder>(
+                    features_,
+                    ((bitField0_ & 0x00000004) != 0),
+                    getParentForChildren(),
+                    isClean());
             features_ = null;
           }
           return featuresBuilder_;
         }
 
-        private com.google.protobuf.LazyStringList keys_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        private com.google.protobuf.LazyStringArrayList keys_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
         private void ensureKeysIsMutable() {
-          if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+          if (!keys_.isModifiable()) {
             keys_ = new com.google.protobuf.LazyStringArrayList(keys_);
-            bitField0_ |= 0x00000008;
           }
+          bitField0_ |= 0x00000008;
         }
         /**
          * <pre>
@@ -4153,10 +4343,12 @@ public final class VectorTile {
          * </pre>
          *
          * <code>repeated string keys = 3;</code>
+         * @return A list containing the keys.
          */
         public com.google.protobuf.ProtocolStringList
-        getKeysList() {
-          return keys_.getUnmodifiableView();
+            getKeysList() {
+          keys_.makeImmutable();
+          return keys_;
         }
         /**
          * <pre>
@@ -4164,6 +4356,7 @@ public final class VectorTile {
          * </pre>
          *
          * <code>repeated string keys = 3;</code>
+         * @return The count of keys.
          */
         public int getKeysCount() {
           return keys_.size();
@@ -4174,6 +4367,8 @@ public final class VectorTile {
          * </pre>
          *
          * <code>repeated string keys = 3;</code>
+         * @param index The index of the element to return.
+         * @return The keys at the given index.
          */
         public java.lang.String getKeys(int index) {
           return keys_.get(index);
@@ -4184,9 +4379,11 @@ public final class VectorTile {
          * </pre>
          *
          * <code>repeated string keys = 3;</code>
+         * @param index The index of the value to return.
+         * @return The bytes of the keys at the given index.
          */
         public com.google.protobuf.ByteString
-        getKeysBytes(int index) {
+            getKeysBytes(int index) {
           return keys_.getByteString(index);
         }
         /**
@@ -4195,14 +4392,16 @@ public final class VectorTile {
          * </pre>
          *
          * <code>repeated string keys = 3;</code>
+         * @param index The index to set the value at.
+         * @param value The keys to set.
+         * @return This builder for chaining.
          */
         public Builder setKeys(
             int index, java.lang.String value) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
+          if (value == null) { throw new NullPointerException(); }
           ensureKeysIsMutable();
           keys_.set(index, value);
+          bitField0_ |= 0x00000008;
           onChanged();
           return this;
         }
@@ -4212,14 +4411,15 @@ public final class VectorTile {
          * </pre>
          *
          * <code>repeated string keys = 3;</code>
+         * @param value The keys to add.
+         * @return This builder for chaining.
          */
         public Builder addKeys(
             java.lang.String value) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
+          if (value == null) { throw new NullPointerException(); }
           ensureKeysIsMutable();
           keys_.add(value);
+          bitField0_ |= 0x00000008;
           onChanged();
           return this;
         }
@@ -4229,12 +4429,15 @@ public final class VectorTile {
          * </pre>
          *
          * <code>repeated string keys = 3;</code>
+         * @param values The keys to add.
+         * @return This builder for chaining.
          */
         public Builder addAllKeys(
             java.lang.Iterable<java.lang.String> values) {
           ensureKeysIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
               values, keys_);
+          bitField0_ |= 0x00000008;
           onChanged();
           return this;
         }
@@ -4244,10 +4447,12 @@ public final class VectorTile {
          * </pre>
          *
          * <code>repeated string keys = 3;</code>
+         * @return This builder for chaining.
          */
         public Builder clearKeys() {
-          keys_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-          bitField0_ = (bitField0_ & ~0x00000008);
+          keys_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000008);;
           onChanged();
           return this;
         }
@@ -4257,29 +4462,30 @@ public final class VectorTile {
          * </pre>
          *
          * <code>repeated string keys = 3;</code>
+         * @param value The bytes of the keys to add.
+         * @return This builder for chaining.
          */
         public Builder addKeysBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
+          if (value == null) { throw new NullPointerException(); }
           ensureKeysIsMutable();
           keys_.add(value);
+          bitField0_ |= 0x00000008;
           onChanged();
           return this;
         }
 
-        private java.util.List<VectorTile.Tile.Value> values_ =
-            java.util.Collections.emptyList();
+        private java.util.List<edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value> values_ =
+          java.util.Collections.emptyList();
         private void ensureValuesIsMutable() {
-          if (!((bitField0_ & 0x00000010) == 0x00000010)) {
-            values_ = new java.util.ArrayList<VectorTile.Tile.Value>(values_);
+          if (!((bitField0_ & 0x00000010) != 0)) {
+            values_ = new java.util.ArrayList<edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value>(values_);
             bitField0_ |= 0x00000010;
-          }
+           }
         }
 
         private com.google.protobuf.RepeatedFieldBuilderV3<
-            VectorTile.Tile.Value, VectorTile.Tile.Value.Builder, VectorTile.Tile.ValueOrBuilder> valuesBuilder_;
+            edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value, edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value.Builder, edu.colorado.cires.cmg.mvt.VectorTile.Tile.ValueOrBuilder> valuesBuilder_;
 
         /**
          * <pre>
@@ -4288,7 +4494,7 @@ public final class VectorTile {
          *
          * <code>repeated .vector_tile.Tile.Value values = 4;</code>
          */
-        public java.util.List<VectorTile.Tile.Value> getValuesList() {
+        public java.util.List<edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value> getValuesList() {
           if (valuesBuilder_ == null) {
             return java.util.Collections.unmodifiableList(values_);
           } else {
@@ -4316,7 +4522,7 @@ public final class VectorTile {
          *
          * <code>repeated .vector_tile.Tile.Value values = 4;</code>
          */
-        public VectorTile.Tile.Value getValues(int index) {
+        public edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value getValues(int index) {
           if (valuesBuilder_ == null) {
             return values_.get(index);
           } else {
@@ -4331,7 +4537,7 @@ public final class VectorTile {
          * <code>repeated .vector_tile.Tile.Value values = 4;</code>
          */
         public Builder setValues(
-            int index, VectorTile.Tile.Value value) {
+            int index, edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value value) {
           if (valuesBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -4352,7 +4558,7 @@ public final class VectorTile {
          * <code>repeated .vector_tile.Tile.Value values = 4;</code>
          */
         public Builder setValues(
-            int index, VectorTile.Tile.Value.Builder builderForValue) {
+            int index, edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value.Builder builderForValue) {
           if (valuesBuilder_ == null) {
             ensureValuesIsMutable();
             values_.set(index, builderForValue.build());
@@ -4369,7 +4575,7 @@ public final class VectorTile {
          *
          * <code>repeated .vector_tile.Tile.Value values = 4;</code>
          */
-        public Builder addValues(VectorTile.Tile.Value value) {
+        public Builder addValues(edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value value) {
           if (valuesBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -4390,7 +4596,7 @@ public final class VectorTile {
          * <code>repeated .vector_tile.Tile.Value values = 4;</code>
          */
         public Builder addValues(
-            int index, VectorTile.Tile.Value value) {
+            int index, edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value value) {
           if (valuesBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -4411,7 +4617,7 @@ public final class VectorTile {
          * <code>repeated .vector_tile.Tile.Value values = 4;</code>
          */
         public Builder addValues(
-            VectorTile.Tile.Value.Builder builderForValue) {
+            edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value.Builder builderForValue) {
           if (valuesBuilder_ == null) {
             ensureValuesIsMutable();
             values_.add(builderForValue.build());
@@ -4429,7 +4635,7 @@ public final class VectorTile {
          * <code>repeated .vector_tile.Tile.Value values = 4;</code>
          */
         public Builder addValues(
-            int index, VectorTile.Tile.Value.Builder builderForValue) {
+            int index, edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value.Builder builderForValue) {
           if (valuesBuilder_ == null) {
             ensureValuesIsMutable();
             values_.add(index, builderForValue.build());
@@ -4447,7 +4653,7 @@ public final class VectorTile {
          * <code>repeated .vector_tile.Tile.Value values = 4;</code>
          */
         public Builder addAllValues(
-            java.lang.Iterable<? extends VectorTile.Tile.Value> values) {
+            java.lang.Iterable<? extends edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value> values) {
           if (valuesBuilder_ == null) {
             ensureValuesIsMutable();
             com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -4499,7 +4705,7 @@ public final class VectorTile {
          *
          * <code>repeated .vector_tile.Tile.Value values = 4;</code>
          */
-        public VectorTile.Tile.Value.Builder getValuesBuilder(
+        public edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value.Builder getValuesBuilder(
             int index) {
           return getValuesFieldBuilder().getBuilder(index);
         }
@@ -4510,7 +4716,7 @@ public final class VectorTile {
          *
          * <code>repeated .vector_tile.Tile.Value values = 4;</code>
          */
-        public VectorTile.Tile.ValueOrBuilder getValuesOrBuilder(
+        public edu.colorado.cires.cmg.mvt.VectorTile.Tile.ValueOrBuilder getValuesOrBuilder(
             int index) {
           if (valuesBuilder_ == null) {
             return values_.get(index);  } else {
@@ -4524,8 +4730,8 @@ public final class VectorTile {
          *
          * <code>repeated .vector_tile.Tile.Value values = 4;</code>
          */
-        public java.util.List<? extends VectorTile.Tile.ValueOrBuilder>
-        getValuesOrBuilderList() {
+        public java.util.List<? extends edu.colorado.cires.cmg.mvt.VectorTile.Tile.ValueOrBuilder> 
+             getValuesOrBuilderList() {
           if (valuesBuilder_ != null) {
             return valuesBuilder_.getMessageOrBuilderList();
           } else {
@@ -4539,9 +4745,9 @@ public final class VectorTile {
          *
          * <code>repeated .vector_tile.Tile.Value values = 4;</code>
          */
-        public VectorTile.Tile.Value.Builder addValuesBuilder() {
+        public edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value.Builder addValuesBuilder() {
           return getValuesFieldBuilder().addBuilder(
-              VectorTile.Tile.Value.getDefaultInstance());
+              edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value.getDefaultInstance());
         }
         /**
          * <pre>
@@ -4550,10 +4756,10 @@ public final class VectorTile {
          *
          * <code>repeated .vector_tile.Tile.Value values = 4;</code>
          */
-        public VectorTile.Tile.Value.Builder addValuesBuilder(
+        public edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value.Builder addValuesBuilder(
             int index) {
           return getValuesFieldBuilder().addBuilder(
-              index, VectorTile.Tile.Value.getDefaultInstance());
+              index, edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value.getDefaultInstance());
         }
         /**
          * <pre>
@@ -4562,20 +4768,20 @@ public final class VectorTile {
          *
          * <code>repeated .vector_tile.Tile.Value values = 4;</code>
          */
-        public java.util.List<VectorTile.Tile.Value.Builder>
-        getValuesBuilderList() {
+        public java.util.List<edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value.Builder> 
+             getValuesBuilderList() {
           return getValuesFieldBuilder().getBuilderList();
         }
         private com.google.protobuf.RepeatedFieldBuilderV3<
-            VectorTile.Tile.Value, VectorTile.Tile.Value.Builder, VectorTile.Tile.ValueOrBuilder>
-        getValuesFieldBuilder() {
+            edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value, edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value.Builder, edu.colorado.cires.cmg.mvt.VectorTile.Tile.ValueOrBuilder> 
+            getValuesFieldBuilder() {
           if (valuesBuilder_ == null) {
             valuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-                VectorTile.Tile.Value, VectorTile.Tile.Value.Builder, VectorTile.Tile.ValueOrBuilder>(
-                values_,
-                ((bitField0_ & 0x00000010) == 0x00000010),
-                getParentForChildren(),
-                isClean());
+                edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value, edu.colorado.cires.cmg.mvt.VectorTile.Tile.Value.Builder, edu.colorado.cires.cmg.mvt.VectorTile.Tile.ValueOrBuilder>(
+                    values_,
+                    ((bitField0_ & 0x00000010) != 0),
+                    getParentForChildren(),
+                    isClean());
             values_ = null;
           }
           return valuesBuilder_;
@@ -4589,9 +4795,11 @@ public final class VectorTile {
          * </pre>
          *
          * <code>optional uint32 extent = 5 [default = 4096];</code>
+         * @return Whether the extent field is set.
          */
+        @java.lang.Override
         public boolean hasExtent() {
-          return ((bitField0_ & 0x00000020) == 0x00000020);
+          return ((bitField0_ & 0x00000020) != 0);
         }
         /**
          * <pre>
@@ -4600,7 +4808,9 @@ public final class VectorTile {
          * </pre>
          *
          * <code>optional uint32 extent = 5 [default = 4096];</code>
+         * @return The extent.
          */
+        @java.lang.Override
         public int getExtent() {
           return extent_;
         }
@@ -4611,10 +4821,13 @@ public final class VectorTile {
          * </pre>
          *
          * <code>optional uint32 extent = 5 [default = 4096];</code>
+         * @param value The extent to set.
+         * @return This builder for chaining.
          */
         public Builder setExtent(int value) {
-          bitField0_ |= 0x00000020;
+
           extent_ = value;
+          bitField0_ |= 0x00000020;
           onChanged();
           return this;
         }
@@ -4625,6 +4838,7 @@ public final class VectorTile {
          * </pre>
          *
          * <code>optional uint32 extent = 5 [default = 4096];</code>
+         * @return This builder for chaining.
          */
         public Builder clearExtent() {
           bitField0_ = (bitField0_ & ~0x00000020);
@@ -4632,11 +4846,13 @@ public final class VectorTile {
           onChanged();
           return this;
         }
+        @java.lang.Override
         public final Builder setUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
           return super.setUnknownFields(unknownFields);
         }
 
+        @java.lang.Override
         public final Builder mergeUnknownFields(
             final com.google.protobuf.UnknownFieldSet unknownFields) {
           return super.mergeUnknownFields(unknownFields);
@@ -4647,22 +4863,34 @@ public final class VectorTile {
       }
 
       // @@protoc_insertion_point(class_scope:vector_tile.Tile.Layer)
-      private static final VectorTile.Tile.Layer DEFAULT_INSTANCE;
+      private static final edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer DEFAULT_INSTANCE;
       static {
-        DEFAULT_INSTANCE = new VectorTile.Tile.Layer();
+        DEFAULT_INSTANCE = new edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer();
       }
 
-      public static VectorTile.Tile.Layer getDefaultInstance() {
+      public static edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer getDefaultInstance() {
         return DEFAULT_INSTANCE;
       }
 
       @java.lang.Deprecated public static final com.google.protobuf.Parser<Layer>
           PARSER = new com.google.protobuf.AbstractParser<Layer>() {
+        @java.lang.Override
         public Layer parsePartialFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Layer(input, extensionRegistry);
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
         }
       };
 
@@ -4675,48 +4903,56 @@ public final class VectorTile {
         return PARSER;
       }
 
-      public VectorTile.Tile.Layer getDefaultInstanceForType() {
+      @java.lang.Override
+      public edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
     }
 
     public static final int LAYERS_FIELD_NUMBER = 3;
-    private java.util.List<VectorTile.Tile.Layer> layers_;
+    @SuppressWarnings("serial")
+    private java.util.List<edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer> layers_;
     /**
      * <code>repeated .vector_tile.Tile.Layer layers = 3;</code>
      */
-    public java.util.List<VectorTile.Tile.Layer> getLayersList() {
+    @java.lang.Override
+    public java.util.List<edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer> getLayersList() {
       return layers_;
     }
     /**
      * <code>repeated .vector_tile.Tile.Layer layers = 3;</code>
      */
-    public java.util.List<? extends VectorTile.Tile.LayerOrBuilder>
-    getLayersOrBuilderList() {
+    @java.lang.Override
+    public java.util.List<? extends edu.colorado.cires.cmg.mvt.VectorTile.Tile.LayerOrBuilder> 
+        getLayersOrBuilderList() {
       return layers_;
     }
     /**
      * <code>repeated .vector_tile.Tile.Layer layers = 3;</code>
      */
+    @java.lang.Override
     public int getLayersCount() {
       return layers_.size();
     }
     /**
      * <code>repeated .vector_tile.Tile.Layer layers = 3;</code>
      */
-    public VectorTile.Tile.Layer getLayers(int index) {
+    @java.lang.Override
+    public edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer getLayers(int index) {
       return layers_.get(index);
     }
     /**
      * <code>repeated .vector_tile.Tile.Layer layers = 3;</code>
      */
-    public VectorTile.Tile.LayerOrBuilder getLayersOrBuilder(
+    @java.lang.Override
+    public edu.colorado.cires.cmg.mvt.VectorTile.Tile.LayerOrBuilder getLayersOrBuilder(
         int index) {
       return layers_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -4736,18 +4972,20 @@ public final class VectorTile {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
-        throws java.io.IOException {
+                        throws java.io.IOException {
       com.google.protobuf.GeneratedMessageV3
-          .ExtendableMessage<VectorTile.Tile>.ExtensionWriter
+        .ExtendableMessage<edu.colorado.cires.cmg.mvt.VectorTile.Tile>.ExtensionWriter
           extensionWriter = newExtensionWriter();
       for (int i = 0; i < layers_.size(); i++) {
         output.writeMessage(3, layers_.get(i));
       }
       extensionWriter.writeUntil(8192, output);
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -4755,10 +4993,10 @@ public final class VectorTile {
       size = 0;
       for (int i = 0; i < layers_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(3, layers_.get(i));
+          .computeMessageSize(3, layers_.get(i));
       }
       size += extensionsSerializedSize();
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -4766,20 +5004,19 @@ public final class VectorTile {
     @java.lang.Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
-        return true;
+       return true;
       }
-      if (!(obj instanceof VectorTile.Tile)) {
+      if (!(obj instanceof edu.colorado.cires.cmg.mvt.VectorTile.Tile)) {
         return super.equals(obj);
       }
-      VectorTile.Tile other = (VectorTile.Tile) obj;
+      edu.colorado.cires.cmg.mvt.VectorTile.Tile other = (edu.colorado.cires.cmg.mvt.VectorTile.Tile) obj;
 
-      boolean result = true;
-      result = result && getLayersList()
-          .equals(other.getLayersList());
-      result = result && unknownFields.equals(other.unknownFields);
-      result = result &&
-          getExtensionFields().equals(other.getExtensionFields());
-      return result;
+      if (!getLayersList()
+          .equals(other.getLayersList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      if (!getExtensionFields().equals(other.getExtensionFields()))
+        return false;
+      return true;
     }
 
     @java.lang.Override
@@ -4794,74 +5031,76 @@ public final class VectorTile {
         hash = (53 * hash) + getLayersList().hashCode();
       }
       hash = hashFields(hash, getExtensionFields());
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static VectorTile.Tile parseFrom(
+    public static edu.colorado.cires.cmg.mvt.VectorTile.Tile parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static VectorTile.Tile parseFrom(
+    public static edu.colorado.cires.cmg.mvt.VectorTile.Tile parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static VectorTile.Tile parseFrom(
+    public static edu.colorado.cires.cmg.mvt.VectorTile.Tile parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static VectorTile.Tile parseFrom(
+    public static edu.colorado.cires.cmg.mvt.VectorTile.Tile parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static VectorTile.Tile parseFrom(byte[] data)
+    public static edu.colorado.cires.cmg.mvt.VectorTile.Tile parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static VectorTile.Tile parseFrom(
+    public static edu.colorado.cires.cmg.mvt.VectorTile.Tile parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static VectorTile.Tile parseFrom(java.io.InputStream input)
+    public static edu.colorado.cires.cmg.mvt.VectorTile.Tile parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static VectorTile.Tile parseFrom(
+    public static edu.colorado.cires.cmg.mvt.VectorTile.Tile parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static VectorTile.Tile parseDelimitedFrom(java.io.InputStream input)
+
+    public static edu.colorado.cires.cmg.mvt.VectorTile.Tile parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static VectorTile.Tile parseDelimitedFrom(
+
+    public static edu.colorado.cires.cmg.mvt.VectorTile.Tile parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static VectorTile.Tile parseFrom(
+    public static edu.colorado.cires.cmg.mvt.VectorTile.Tile parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static VectorTile.Tile parseFrom(
+    public static edu.colorado.cires.cmg.mvt.VectorTile.Tile parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -4869,13 +5108,15 @@ public final class VectorTile {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(VectorTile.Tile prototype) {
+    public static Builder newBuilder(edu.colorado.cires.cmg.mvt.VectorTile.Tile prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -4892,70 +5133,78 @@ public final class VectorTile {
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.ExtendableBuilder<
-            VectorTile.Tile, Builder> implements
+          edu.colorado.cires.cmg.mvt.VectorTile.Tile, Builder> implements
         // @@protoc_insertion_point(builder_implements:vector_tile.Tile)
-        VectorTile.TileOrBuilder {
+        edu.colorado.cires.cmg.mvt.VectorTile.TileOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
-      getDescriptor() {
-        return VectorTile.internal_static_vector_tile_Tile_descriptor;
+          getDescriptor() {
+        return edu.colorado.cires.cmg.mvt.VectorTile.internal_static_vector_tile_Tile_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internalGetFieldAccessorTable() {
-        return VectorTile.internal_static_vector_tile_Tile_fieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return edu.colorado.cires.cmg.mvt.VectorTile.internal_static_vector_tile_Tile_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                VectorTile.Tile.class, VectorTile.Tile.Builder.class);
+                edu.colorado.cires.cmg.mvt.VectorTile.Tile.class, edu.colorado.cires.cmg.mvt.VectorTile.Tile.Builder.class);
       }
 
       // Construct using edu.colorado.cires.cmg.mvt.VectorTile.Tile.newBuilder()
       private Builder() {
-        maybeForceBuilderInitialization();
+
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
+
       }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-            .alwaysUseFieldBuilders) {
-          getLayersFieldBuilder();
-        }
-      }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (layersBuilder_ == null) {
           layers_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
         } else {
+          layers_ = null;
           layersBuilder_.clear();
         }
+        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
-      getDescriptorForType() {
-        return VectorTile.internal_static_vector_tile_Tile_descriptor;
+          getDescriptorForType() {
+        return edu.colorado.cires.cmg.mvt.VectorTile.internal_static_vector_tile_Tile_descriptor;
       }
 
-      public VectorTile.Tile getDefaultInstanceForType() {
-        return VectorTile.Tile.getDefaultInstance();
+      @java.lang.Override
+      public edu.colorado.cires.cmg.mvt.VectorTile.Tile getDefaultInstanceForType() {
+        return edu.colorado.cires.cmg.mvt.VectorTile.Tile.getDefaultInstance();
       }
 
-      public VectorTile.Tile build() {
-        VectorTile.Tile result = buildPartial();
+      @java.lang.Override
+      public edu.colorado.cires.cmg.mvt.VectorTile.Tile build() {
+        edu.colorado.cires.cmg.mvt.VectorTile.Tile result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public VectorTile.Tile buildPartial() {
-        VectorTile.Tile result = new VectorTile.Tile(this);
-        int from_bitField0_ = bitField0_;
+      @java.lang.Override
+      public edu.colorado.cires.cmg.mvt.VectorTile.Tile buildPartial() {
+        edu.colorado.cires.cmg.mvt.VectorTile.Tile result = new edu.colorado.cires.cmg.mvt.VectorTile.Tile(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(edu.colorado.cires.cmg.mvt.VectorTile.Tile result) {
         if (layersBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          if (((bitField0_ & 0x00000001) != 0)) {
             layers_ = java.util.Collections.unmodifiableList(layers_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
@@ -4963,70 +5212,83 @@ public final class VectorTile {
         } else {
           result.layers_ = layersBuilder_.build();
         }
-        onBuilt();
-        return result;
       }
 
-      public Builder clone() {
-        return (Builder) super.clone();
+      private void buildPartial0(edu.colorado.cires.cmg.mvt.VectorTile.Tile result) {
+        int from_bitField0_ = bitField0_;
       }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public <Type> Builder setExtension(
           com.google.protobuf.GeneratedMessage.GeneratedExtension<
-              VectorTile.Tile, Type> extension,
+              edu.colorado.cires.cmg.mvt.VectorTile.Tile, Type> extension,
           Type value) {
-        return (Builder) super.setExtension(extension, value);
+        return super.setExtension(extension, value);
       }
+      @java.lang.Override
       public <Type> Builder setExtension(
           com.google.protobuf.GeneratedMessage.GeneratedExtension<
-              VectorTile.Tile, java.util.List<Type>> extension,
+              edu.colorado.cires.cmg.mvt.VectorTile.Tile, java.util.List<Type>> extension,
           int index, Type value) {
-        return (Builder) super.setExtension(extension, index, value);
+        return super.setExtension(extension, index, value);
       }
+      @java.lang.Override
       public <Type> Builder addExtension(
           com.google.protobuf.GeneratedMessage.GeneratedExtension<
-              VectorTile.Tile, java.util.List<Type>> extension,
+              edu.colorado.cires.cmg.mvt.VectorTile.Tile, java.util.List<Type>> extension,
           Type value) {
-        return (Builder) super.addExtension(extension, value);
+        return super.addExtension(extension, value);
       }
-      public <Type> Builder clearExtension(
+      @java.lang.Override
+      public <T> Builder clearExtension(
           com.google.protobuf.GeneratedMessage.GeneratedExtension<
-              VectorTile.Tile, ?> extension) {
-        return (Builder) super.clearExtension(extension);
+              edu.colorado.cires.cmg.mvt.VectorTile.Tile, T> extension) {
+        return super.clearExtension(extension);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof VectorTile.Tile) {
-          return mergeFrom((VectorTile.Tile)other);
+        if (other instanceof edu.colorado.cires.cmg.mvt.VectorTile.Tile) {
+          return mergeFrom((edu.colorado.cires.cmg.mvt.VectorTile.Tile)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(VectorTile.Tile other) {
-        if (other == VectorTile.Tile.getDefaultInstance()) return this;
+      public Builder mergeFrom(edu.colorado.cires.cmg.mvt.VectorTile.Tile other) {
+        if (other == edu.colorado.cires.cmg.mvt.VectorTile.Tile.getDefaultInstance()) return this;
         if (layersBuilder_ == null) {
           if (!other.layers_.isEmpty()) {
             if (layers_.isEmpty()) {
@@ -5045,20 +5307,21 @@ public final class VectorTile {
               layersBuilder_ = null;
               layers_ = other.layers_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              layersBuilder_ =
-                  com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                      getLayersFieldBuilder() : null;
+              layersBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getLayersFieldBuilder() : null;
             } else {
               layersBuilder_.addAllMessages(other.layers_);
             }
           }
         }
         this.mergeExtensionFields(other);
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         for (int i = 0; i < getLayersCount(); i++) {
           if (!getLayers(i).isInitialized()) {
@@ -5071,41 +5334,68 @@ public final class VectorTile {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        VectorTile.Tile parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 26: {
+                edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer m =
+                    input.readMessage(
+                        edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer.PARSER,
+                        extensionRegistry);
+                if (layersBuilder_ == null) {
+                  ensureLayersIsMutable();
+                  layers_.add(m);
+                } else {
+                  layersBuilder_.addMessage(m);
+                }
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (VectorTile.Tile) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
       private int bitField0_;
 
-      private java.util.List<VectorTile.Tile.Layer> layers_ =
-          java.util.Collections.emptyList();
+      private java.util.List<edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer> layers_ =
+        java.util.Collections.emptyList();
       private void ensureLayersIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          layers_ = new java.util.ArrayList<VectorTile.Tile.Layer>(layers_);
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          layers_ = new java.util.ArrayList<edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer>(layers_);
           bitField0_ |= 0x00000001;
-        }
+         }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          VectorTile.Tile.Layer, VectorTile.Tile.Layer.Builder, VectorTile.Tile.LayerOrBuilder> layersBuilder_;
+          edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer, edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer.Builder, edu.colorado.cires.cmg.mvt.VectorTile.Tile.LayerOrBuilder> layersBuilder_;
 
       /**
        * <code>repeated .vector_tile.Tile.Layer layers = 3;</code>
        */
-      public java.util.List<VectorTile.Tile.Layer> getLayersList() {
+      public java.util.List<edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer> getLayersList() {
         if (layersBuilder_ == null) {
           return java.util.Collections.unmodifiableList(layers_);
         } else {
@@ -5125,7 +5415,7 @@ public final class VectorTile {
       /**
        * <code>repeated .vector_tile.Tile.Layer layers = 3;</code>
        */
-      public VectorTile.Tile.Layer getLayers(int index) {
+      public edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer getLayers(int index) {
         if (layersBuilder_ == null) {
           return layers_.get(index);
         } else {
@@ -5136,7 +5426,7 @@ public final class VectorTile {
        * <code>repeated .vector_tile.Tile.Layer layers = 3;</code>
        */
       public Builder setLayers(
-          int index, VectorTile.Tile.Layer value) {
+          int index, edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer value) {
         if (layersBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -5153,7 +5443,7 @@ public final class VectorTile {
        * <code>repeated .vector_tile.Tile.Layer layers = 3;</code>
        */
       public Builder setLayers(
-          int index, VectorTile.Tile.Layer.Builder builderForValue) {
+          int index, edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer.Builder builderForValue) {
         if (layersBuilder_ == null) {
           ensureLayersIsMutable();
           layers_.set(index, builderForValue.build());
@@ -5166,7 +5456,7 @@ public final class VectorTile {
       /**
        * <code>repeated .vector_tile.Tile.Layer layers = 3;</code>
        */
-      public Builder addLayers(VectorTile.Tile.Layer value) {
+      public Builder addLayers(edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer value) {
         if (layersBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -5183,7 +5473,7 @@ public final class VectorTile {
        * <code>repeated .vector_tile.Tile.Layer layers = 3;</code>
        */
       public Builder addLayers(
-          int index, VectorTile.Tile.Layer value) {
+          int index, edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer value) {
         if (layersBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -5200,7 +5490,7 @@ public final class VectorTile {
        * <code>repeated .vector_tile.Tile.Layer layers = 3;</code>
        */
       public Builder addLayers(
-          VectorTile.Tile.Layer.Builder builderForValue) {
+          edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer.Builder builderForValue) {
         if (layersBuilder_ == null) {
           ensureLayersIsMutable();
           layers_.add(builderForValue.build());
@@ -5214,7 +5504,7 @@ public final class VectorTile {
        * <code>repeated .vector_tile.Tile.Layer layers = 3;</code>
        */
       public Builder addLayers(
-          int index, VectorTile.Tile.Layer.Builder builderForValue) {
+          int index, edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer.Builder builderForValue) {
         if (layersBuilder_ == null) {
           ensureLayersIsMutable();
           layers_.add(index, builderForValue.build());
@@ -5228,7 +5518,7 @@ public final class VectorTile {
        * <code>repeated .vector_tile.Tile.Layer layers = 3;</code>
        */
       public Builder addAllLayers(
-          java.lang.Iterable<? extends VectorTile.Tile.Layer> values) {
+          java.lang.Iterable<? extends edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer> values) {
         if (layersBuilder_ == null) {
           ensureLayersIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -5268,14 +5558,14 @@ public final class VectorTile {
       /**
        * <code>repeated .vector_tile.Tile.Layer layers = 3;</code>
        */
-      public VectorTile.Tile.Layer.Builder getLayersBuilder(
+      public edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer.Builder getLayersBuilder(
           int index) {
         return getLayersFieldBuilder().getBuilder(index);
       }
       /**
        * <code>repeated .vector_tile.Tile.Layer layers = 3;</code>
        */
-      public VectorTile.Tile.LayerOrBuilder getLayersOrBuilder(
+      public edu.colorado.cires.cmg.mvt.VectorTile.Tile.LayerOrBuilder getLayersOrBuilder(
           int index) {
         if (layersBuilder_ == null) {
           return layers_.get(index);  } else {
@@ -5285,8 +5575,8 @@ public final class VectorTile {
       /**
        * <code>repeated .vector_tile.Tile.Layer layers = 3;</code>
        */
-      public java.util.List<? extends VectorTile.Tile.LayerOrBuilder>
-      getLayersOrBuilderList() {
+      public java.util.List<? extends edu.colorado.cires.cmg.mvt.VectorTile.Tile.LayerOrBuilder> 
+           getLayersOrBuilderList() {
         if (layersBuilder_ != null) {
           return layersBuilder_.getMessageOrBuilderList();
         } else {
@@ -5296,44 +5586,46 @@ public final class VectorTile {
       /**
        * <code>repeated .vector_tile.Tile.Layer layers = 3;</code>
        */
-      public VectorTile.Tile.Layer.Builder addLayersBuilder() {
+      public edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer.Builder addLayersBuilder() {
         return getLayersFieldBuilder().addBuilder(
-            VectorTile.Tile.Layer.getDefaultInstance());
+            edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer.getDefaultInstance());
       }
       /**
        * <code>repeated .vector_tile.Tile.Layer layers = 3;</code>
        */
-      public VectorTile.Tile.Layer.Builder addLayersBuilder(
+      public edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer.Builder addLayersBuilder(
           int index) {
         return getLayersFieldBuilder().addBuilder(
-            index, VectorTile.Tile.Layer.getDefaultInstance());
+            index, edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer.getDefaultInstance());
       }
       /**
        * <code>repeated .vector_tile.Tile.Layer layers = 3;</code>
        */
-      public java.util.List<VectorTile.Tile.Layer.Builder>
-      getLayersBuilderList() {
+      public java.util.List<edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer.Builder> 
+           getLayersBuilderList() {
         return getLayersFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          VectorTile.Tile.Layer, VectorTile.Tile.Layer.Builder, VectorTile.Tile.LayerOrBuilder>
-      getLayersFieldBuilder() {
+          edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer, edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer.Builder, edu.colorado.cires.cmg.mvt.VectorTile.Tile.LayerOrBuilder> 
+          getLayersFieldBuilder() {
         if (layersBuilder_ == null) {
           layersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              VectorTile.Tile.Layer, VectorTile.Tile.Layer.Builder, VectorTile.Tile.LayerOrBuilder>(
-              layers_,
-              ((bitField0_ & 0x00000001) == 0x00000001),
-              getParentForChildren(),
-              isClean());
+              edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer, edu.colorado.cires.cmg.mvt.VectorTile.Tile.Layer.Builder, edu.colorado.cires.cmg.mvt.VectorTile.Tile.LayerOrBuilder>(
+                  layers_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
           layers_ = null;
         }
         return layersBuilder_;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -5344,22 +5636,34 @@ public final class VectorTile {
     }
 
     // @@protoc_insertion_point(class_scope:vector_tile.Tile)
-    private static final VectorTile.Tile DEFAULT_INSTANCE;
+    private static final edu.colorado.cires.cmg.mvt.VectorTile.Tile DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new VectorTile.Tile();
+      DEFAULT_INSTANCE = new edu.colorado.cires.cmg.mvt.VectorTile.Tile();
     }
 
-    public static VectorTile.Tile getDefaultInstance() {
+    public static edu.colorado.cires.cmg.mvt.VectorTile.Tile getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     @java.lang.Deprecated public static final com.google.protobuf.Parser<Tile>
         PARSER = new com.google.protobuf.AbstractParser<Tile>() {
+      @java.lang.Override
       public Tile parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Tile(input, extensionRegistry);
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
       }
     };
 
@@ -5372,93 +5676,86 @@ public final class VectorTile {
       return PARSER;
     }
 
-    public VectorTile.Tile getDefaultInstanceForType() {
+    @java.lang.Override
+    public edu.colorado.cires.cmg.mvt.VectorTile.Tile getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_vector_tile_Tile_descriptor;
-  private static final
-  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    internal_static_vector_tile_Tile_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_vector_tile_Tile_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_vector_tile_Tile_Value_descriptor;
-  private static final
-  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    internal_static_vector_tile_Tile_Value_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_vector_tile_Tile_Value_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_vector_tile_Tile_Feature_descriptor;
-  private static final
-  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    internal_static_vector_tile_Tile_Feature_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_vector_tile_Tile_Feature_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-      internal_static_vector_tile_Tile_Layer_descriptor;
-  private static final
-  com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    internal_static_vector_tile_Tile_Layer_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_vector_tile_Tile_Layer_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
-  getDescriptor() {
+      getDescriptor() {
     return descriptor;
   }
   private static  com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-        "\n\021vector_tile.proto\022\013vector_tile\"\300\004\n\004Til" +
-            "e\022\'\n\006layers\030\003 \003(\0132\027.vector_tile.Tile.Lay" +
-            "er\032\241\001\n\005Value\022\024\n\014string_value\030\001 \001(\t\022\023\n\013fl" +
-            "oat_value\030\002 \001(\002\022\024\n\014double_value\030\003 \001(\001\022\021\n" +
-            "\tint_value\030\004 \001(\003\022\022\n\nuint_value\030\005 \001(\004\022\022\n\n" +
-            "sint_value\030\006 \001(\022\022\022\n\nbool_value\030\007 \001(\010*\010\010\010" +
-            "\020\200\200\200\200\002\032s\n\007Feature\022\r\n\002id\030\001 \001(\004:\0010\022\020\n\004tags" +
-            "\030\002 \003(\rB\002\020\001\0221\n\004type\030\003 \001(\0162\032.vector_tile.T" +
-            "ile.GeomType:\007UNKNOWN\022\024\n\010geometry\030\004 \003(\rB" +
-            "\002\020\001\032\255\001\n\005Layer\022\022\n\007version\030\017 \002(\r:\0011\022\014\n\004nam" +
-            "e\030\001 \002(\t\022+\n\010features\030\002 \003(\0132\031.vector_tile." +
-            "Tile.Feature\022\014\n\004keys\030\003 \003(\t\022\'\n\006values\030\004 \003" +
-            "(\0132\027.vector_tile.Tile.Value\022\024\n\006extent\030\005 " +
-            "\001(\r:\0044096*\010\010\020\020\200\200\200\200\002\"?\n\010GeomType\022\013\n\007UNKNO" +
-            "WN\020\000\022\t\n\005POINT\020\001\022\016\n\nLINESTRING\020\002\022\013\n\007POLYG" +
-            "ON\020\003*\005\010\020\020\200@B+\n\035edu.colorado.cires.cmg.mvt" +
-            "B\nVectorTile"
+      "\n$src/main/resources/vector_tile.proto\022\013" +
+      "vector_tile\"\300\004\n\004Tile\022\'\n\006layers\030\003 \003(\0132\027.v" +
+      "ector_tile.Tile.Layer\032\241\001\n\005Value\022\024\n\014strin" +
+      "g_value\030\001 \001(\t\022\023\n\013float_value\030\002 \001(\002\022\024\n\014do" +
+      "uble_value\030\003 \001(\001\022\021\n\tint_value\030\004 \001(\003\022\022\n\nu" +
+      "int_value\030\005 \001(\004\022\022\n\nsint_value\030\006 \001(\022\022\022\n\nb" +
+      "ool_value\030\007 \001(\010*\010\010\010\020\200\200\200\200\002\032s\n\007Feature\022\r\n\002" +
+      "id\030\001 \001(\004:\0010\022\020\n\004tags\030\002 \003(\rB\002\020\001\0221\n\004type\030\003 " +
+      "\001(\0162\032.vector_tile.Tile.GeomType:\007UNKNOWN" +
+      "\022\024\n\010geometry\030\004 \003(\rB\002\020\001\032\255\001\n\005Layer\022\022\n\007vers" +
+      "ion\030\017 \002(\r:\0011\022\014\n\004name\030\001 \002(\t\022+\n\010features\030\002" +
+      " \003(\0132\031.vector_tile.Tile.Feature\022\014\n\004keys\030" +
+      "\003 \003(\t\022\'\n\006values\030\004 \003(\0132\027.vector_tile.Tile" +
+      ".Value\022\024\n\006extent\030\005 \001(\r:\0044096*\010\010\020\020\200\200\200\200\002\"?" +
+      "\n\010GeomType\022\013\n\007UNKNOWN\020\000\022\t\n\005POINT\020\001\022\016\n\nLI" +
+      "NESTRING\020\002\022\013\n\007POLYGON\020\003*\005\010\020\020\200@B(\n\032edu.co" +
+      "lorado.cires.cmg.mvtB\nVectorTile"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
-        .internalBuildGeneratedFileFrom(descriptorData,
-            new com.google.protobuf.Descriptors.FileDescriptor[] {
-            }, assigner);
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
+      .internalBuildGeneratedFileFrom(descriptorData,
+        new com.google.protobuf.Descriptors.FileDescriptor[] {
+        });
     internal_static_vector_tile_Tile_descriptor =
-        getDescriptor().getMessageTypes().get(0);
+      getDescriptor().getMessageTypes().get(0);
     internal_static_vector_tile_Tile_fieldAccessorTable = new
-        com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_vector_tile_Tile_descriptor,
         new java.lang.String[] { "Layers", });
     internal_static_vector_tile_Tile_Value_descriptor =
-        internal_static_vector_tile_Tile_descriptor.getNestedTypes().get(0);
+      internal_static_vector_tile_Tile_descriptor.getNestedTypes().get(0);
     internal_static_vector_tile_Tile_Value_fieldAccessorTable = new
-        com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_vector_tile_Tile_Value_descriptor,
         new java.lang.String[] { "StringValue", "FloatValue", "DoubleValue", "IntValue", "UintValue", "SintValue", "BoolValue", });
     internal_static_vector_tile_Tile_Feature_descriptor =
-        internal_static_vector_tile_Tile_descriptor.getNestedTypes().get(1);
+      internal_static_vector_tile_Tile_descriptor.getNestedTypes().get(1);
     internal_static_vector_tile_Tile_Feature_fieldAccessorTable = new
-        com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_vector_tile_Tile_Feature_descriptor,
         new java.lang.String[] { "Id", "Tags", "Type", "Geometry", });
     internal_static_vector_tile_Tile_Layer_descriptor =
-        internal_static_vector_tile_Tile_descriptor.getNestedTypes().get(2);
+      internal_static_vector_tile_Tile_descriptor.getNestedTypes().get(2);
     internal_static_vector_tile_Tile_Layer_fieldAccessorTable = new
-        com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_vector_tile_Tile_Layer_descriptor,
         new java.lang.String[] { "Version", "Name", "Features", "Keys", "Values", "Extent", });
   }

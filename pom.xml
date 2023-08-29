@@ -61,7 +61,7 @@
     <dependency>
       <groupId>com.google.protobuf</groupId>
       <artifactId>protobuf-java</artifactId>
-      <version>3.19.3</version>
+      <version>3.24.2</version>
     </dependency>
     <dependency>
       <groupId>org.locationtech.jts</groupId>
@@ -215,7 +215,10 @@
       <plugin>
         <groupId>com.github.spotbugs</groupId>
         <artifactId>spotbugs-maven-plugin</artifactId>
-        <version>4.2.2</version>
+        <version>4.7.3.5</version>
+        <configuration>
+          <excludeFilterFile>spotbugs-exclude.xml</excludeFilterFile>
+        </configuration>
         <executions>
           <execution>
             <goals>
@@ -233,21 +236,21 @@
       <id>dep-check</id>
       <build>
         <plugins>
-<!--          <plugin>-->
-<!--            <groupId>org.owasp</groupId>-->
-<!--            <artifactId>dependency-check-maven</artifactId>-->
-<!--            <version>6.5.0</version>-->
-<!--            <configuration>-->
-<!--              <failBuildOnAnyVulnerability>true</failBuildOnAnyVulnerability>-->
-<!--            </configuration>-->
-<!--            <executions>-->
-<!--              <execution>-->
-<!--                <goals>-->
-<!--                  <goal>check</goal>-->
-<!--                </goals>-->
-<!--              </execution>-->
-<!--            </executions>-->
-<!--          </plugin>-->
+          <plugin>
+            <groupId>org.owasp</groupId>
+            <artifactId>dependency-check-maven</artifactId>
+            <version>8.4.0</version>
+            <configuration>
+              <failBuildOnAnyVulnerability>true</failBuildOnAnyVulnerability>
+            </configuration>
+            <executions>
+              <execution>
+                <goals>
+                  <goal>check</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
         </plugins>
       </build>
     </profile>
