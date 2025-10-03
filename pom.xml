@@ -56,7 +56,6 @@
     <slf4j.version>1.7.33</slf4j.version>
     <javadoc.version>3.3.1</javadoc.version>
     <jacoco.version>0.8.7</jacoco.version>
-    <sign.serverId>gpg-sign</sign.serverId>
     <nvdApiKey>${env.NVD_API_KEY}</nvdApiKey>
     <ossIndexUsername>${env.OSS_INDEX_USERNAME}</ossIndexUsername>
     <ossIndexPassword>${env.OSS_INDEX_PASSWORD}</ossIndexPassword>
@@ -133,16 +132,6 @@
           <version>3.0.0</version>
         </plugin>
         <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-release-plugin</artifactId>
-          <version>3.0.0-M4</version>
-        </plugin>
-        <plugin>
-          <groupId>pl.project13.maven</groupId>
-          <artifactId>git-commit-id-plugin</artifactId>
-          <version>4.9.10</version>
-        </plugin>
-        <plugin>
           <groupId>org.jacoco</groupId>
           <artifactId>jacoco-maven-plugin</artifactId>
           <version>${jacoco.version}</version>
@@ -199,6 +188,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-release-plugin</artifactId>
+        <version>3.1.1</version>
         <configuration>
           <autoVersionSubmodules>true</autoVersionSubmodules>
           <useReleaseProfile>false</useReleaseProfile>
@@ -279,11 +269,15 @@
 
     <profile>
       <id>release</id>
+      <properties>
+        <sign.skipNoKey>false</sign.skipNoKey>
+      </properties>
       <build>
         <plugins>
           <plugin>
             <groupId>pl.project13.maven</groupId>
             <artifactId>git-commit-id-plugin</artifactId>
+            <version>4.9.10</version>
             <executions>
               <execution>
                 <id>get-the-git-infos</id>
@@ -301,7 +295,6 @@
                 <replacementProperty>
                   <property>git.remote.origin.url</property>
                   <propertyOutputSuffix>suffix</propertyOutputSuffix>
-                  git@github.com\:CI-CMG/trackline-simplifier.git
                   <token>^.+/(.+).git$</token>
                   <value>$1</value>
                   <regex>true</regex>
@@ -324,7 +317,6 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-source-plugin</artifactId>
-            <version>3.2.1</version>
             <executions>
               <execution>
                 <id>attach-sources</id>
@@ -337,7 +329,7 @@
           <plugin>
             <groupId>org.simplify4u.plugins</groupId>
             <artifactId>sign-maven-plugin</artifactId>
-            <version>1.0.0</version>
+            <version>1.1.0</version>
             <executions>
               <execution>
                 <goals>
